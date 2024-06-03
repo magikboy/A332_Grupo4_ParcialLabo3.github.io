@@ -529,3 +529,85 @@ body {
     object-fit: cover;
     filter: brightness(90%);
 }
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer-section.logo-section img {
+    max-width: 100px; /* Ajusta el tamaño máximo del logo */
+    height: auto; /* Mantiene la relación de aspecto */
+}
+
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+.footer-section .social-media {
+    display: flex;
+    gap: 10px;
+}
+
+
+.footer-section .social-media img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}
+
+.footer-bottom a {
+    color: #cda45e;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #b3924f;
+}
+
+@media (max-width: 600px) {
+    .products .product-item {
+        width: 100%;
+    }
+}
