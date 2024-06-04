@@ -423,6 +423,7 @@ body {
 
 
 .merch-section {
+    border: 1px solid blue;
     padding: 50px 0;
     background-color: #1E1C1C;
     color: #fff;
@@ -440,9 +441,9 @@ body {
 }
 
 .merch-section .img-fluid {
-    margin: 10px;
     justify-content: center;
     align-items: center;
+    margin: 10px;
     max-width: 100%;
     transition: transform 0.3s;
 }
