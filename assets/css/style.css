@@ -434,56 +434,16 @@ body {
     margin-bottom: 30px;
 }
 
-.remera {
+.merch-section .row {
+    display: flex;
     justify-content: center;
-    text-align: center;
+    align-items: center;
 }
 
 .merch-section .img-fluid {
-    margin: 10px;
-    justify-content: center;
-    align-items: center;
     max-width: 100%;
+    height: auto;
     transition: transform 0.3s;
-}
-
-.merch-section .img-center1 {
-    transition: transform 0.3s;
-    margin-top: 60px;
-    margin-left: 80px;
-}
-
-.merch-section .img-center2 {
-
-    transition: transform 0.3s;
-    margin-top: 250px;
-    margin-left: -80px;
-}
-
-.merch-center1
-{   
-    padding: 0;
-}
-
-.merch-center2
-{    
-    display: flex;
-    padding: 0;
-}
-
-.bg-color1, .bg-color4
-{
-    background-color: rgb(205, 103, 80);
-}
-.bg-color2
-{
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(246, 217, 143);
-}
-.bg-color3
-{
-    background-color: rgb(246, 217, 143);
 }
 
 .merch-section .img-fluid:hover {
