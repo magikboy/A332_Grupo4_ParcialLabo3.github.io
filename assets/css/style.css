@@ -27,7 +27,9 @@ body {
 .navbar {
     background-color: #1E1C1C;
     width: 100%;
-    position: fixed;
+    position: fixed !important;
+    top: 0;
+    z-index: 1000 !important;
 }
 
 .nav-container {
