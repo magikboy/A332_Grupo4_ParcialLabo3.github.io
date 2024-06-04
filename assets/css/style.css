@@ -366,8 +366,8 @@ body {
 .gallery {
     background-color: #1E1C1C;
     color: #fff;
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
 }
 
 .gallery .row {
@@ -422,6 +422,7 @@ body {
 }
 
 
+
 .merch-section {
     border: 1px solid blue;
     padding: 50px 0;
@@ -429,23 +430,28 @@ body {
     color: #fff;
 }
 
+
 .merch-section h2 {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 30px;
 }
 
+
 .remera {
     justify-content: center;
     text-align: center;
 }
 
+
 .merch-section .img-fluid {
     justify-content: center;
     align-items: center;
+    margin: 5px;
     max-width: 100%;
     transition: transform 0.3s;
 }
+
 
 .merch-section .img-center1 {
     transition: transform 0.3s;
@@ -453,38 +459,41 @@ body {
     margin-left: 80px;
 }
 
-.merch-section .img-center2 {
 
+.merch-section .img-center2 {
     transition: transform 0.3s;
     margin-top: 250px;
     margin-left: -80px;
 }
 
-.merch-center1
-{   
+
+.merch-center1 {   
     padding: 0;
 }
 
-.merch-center2
-{    
+
+.merch-center2 {    
     display: flex;
     padding: 0;
 }
 
-.bg-color1, .bg-color4
-{
+
+.bg-color1, .bg-color4 {
     background-color: rgb(205, 103, 80);
 }
-.bg-color2
-{
+
+
+.bg-color2 {
     align-items: center;
     justify-content: center;
     background-color: rgb(246, 217, 143);
 }
-.bg-color3
-{
+
+
+.bg-color3 {
     background-color: rgb(246, 217, 143);
 }
+
 
 .merch-section .img-fluid:hover {
     transform: scale(1.05);
@@ -496,9 +505,10 @@ body {
     color: #000000;
     background-color: #ffffff;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: background-color 0.3s ease;
 }
+
 
 .merch-section .btn:hover {
     background-color: #ffffff;
@@ -699,6 +709,7 @@ footer {
         font-size: 12px;
     }
     .gallery .row {
+        
         display: flex;
         flex-direction: column; /* Cambia la dirección del flex a columna */
         padding: 10px; /* Añade padding alrededor de la galería */
