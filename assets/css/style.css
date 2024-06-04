@@ -682,6 +682,9 @@ footer {
     .gallery {
         padding: 10px; /* Reduce el padding en pantallas pequeñas */
     }
+    .gallery .container-fluid {
+        padding: 0;
+    }
     .carousel-fixed-text h1,
     .carousel-fixed-text p {
         font-size: 1rem;
@@ -766,6 +769,9 @@ footer {
     .gallery {
         padding: 10px; /* Reduce el padding en pantallas pequeñas */
     }
+    .gallery .container-fluid {
+        padding: 0;
+    }
     .carousel-fixed-text h1,
     .carousel-fixed-text p {
         font-size: 1rem;
@@ -842,6 +848,9 @@ footer {
     .gallery .col-md-12 {
         padding: 40px;
     }
+    .gallery .container-fluid {
+        padding: 0;
+    }
     .carousel-fixed-text h1,
     .carousel-fixed-text p {
         font-size: 1.2rem;
@@ -905,6 +914,9 @@ footer {
     }
     .gallery .col-md-12 {
         padding: 45px;
+    }
+    .gallery .container-fluid {
+        padding: 0;
     }
     .carousel-fixed-text h1,
     .carousel-fixed-text p {
