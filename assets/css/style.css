@@ -315,7 +315,7 @@ body {
     left: 60%;
     transform: translate(-50%, -50%);
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     border-radius: 20px;
 }
 
@@ -323,24 +323,24 @@ body {
 .carousel-fixed-text h3,
 .carousel-fixed-text p {
     margin: 0;
-    padding: 0.5em 1em;
+    padding: 0.25em 1em;
     color: rgb(255, 255, 255);
 }
 
 .carousel-fixed-text h1 {
     font-size: 4em;
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 6px 6px 8px #000000;
 }
 
 .carousel-fixed-text h3 {
     font-size: 2em;
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 6px 6px 8px #000000;
 }
 
 .carousel-fixed-text p {
     font-size: 1.5em;
     color: rgb(172, 172, 172);
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 6px 6px 8px #000000;
 }
 
 
