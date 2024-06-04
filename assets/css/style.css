@@ -27,6 +27,9 @@ body {
 .navbar {
     background-color: #1E1C1C;
     width: 100%;
+    position: fixed !important;
+    top: 0;
+    z-index: 1000 !important;
 }
 
 .nav-container {
@@ -34,7 +37,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 62px;
-    position: relative;
+    position: relative; 
     z-index: 1100;
 }
 
@@ -53,7 +56,6 @@ body {
     transition: transform 0.5s ease-in-out;
     text-align: center;
 }
-
 
 .navbar .nav-container li {
     list-style: none;
@@ -370,6 +372,10 @@ body {
     margin: 0;
 }
 
+.gallery .container-fluid {
+    padding: 0;
+}
+
 .gallery .row {
     margin: 0;
     width: 100%;
@@ -678,6 +684,9 @@ footer {
     .gallery {
         padding: 10px; /* Reduce el padding en pantallas pequeñas */
     }
+    .gallery .container-fluid {
+        padding: 0;
+    }
     .carousel-fixed-text h1,
     .carousel-fixed-text p {
         font-size: 1rem;
@@ -762,6 +771,9 @@ footer {
     .gallery {
         padding: 10px; /* Reduce el padding en pantallas pequeñas */
     }
+    .gallery .container-fluid {
+        padding: 0;
+    }
     .carousel-fixed-text h1,
     .carousel-fixed-text p {
         font-size: 1rem;
@@ -838,6 +850,9 @@ footer {
     .gallery .col-md-12 {
         padding: 40px;
     }
+    .gallery .container-fluid {
+        padding: 0;
+    }
     .carousel-fixed-text h1,
     .carousel-fixed-text p {
         font-size: 1.2rem;
@@ -901,6 +916,9 @@ footer {
     }
     .gallery .col-md-12 {
         padding: 45px;
+    }
+    .gallery .container-fluid {
+        padding: 0;
     }
     .carousel-fixed-text h1,
     .carousel-fixed-text p {
