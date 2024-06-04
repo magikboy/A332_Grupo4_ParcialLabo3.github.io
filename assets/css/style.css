@@ -183,6 +183,21 @@ body {
     transform: rotate(-45deg);
 }
 
+.user-icon {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    margin-right:50px;
+}
+
+.user-icon img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+
+
 /* Personaliza la barra de desplazamiento completa */
 ::-webkit-scrollbar {
     width: 12px;  /* Ancho de la barra de desplazamiento */
@@ -701,6 +716,10 @@ footer {
     }
     .contact-info p {
         margin-bottom: 10px;
+    }
+
+    .user-icon{
+        display: none;
     }
 }
 
