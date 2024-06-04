@@ -183,6 +183,21 @@ body {
     transform: rotate(-45deg);
 }
 
+.user-icon {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    margin-right:50px;
+}
+
+.user-icon img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+
+
 /* Personaliza la barra de desplazamiento completa */
 ::-webkit-scrollbar {
     width: 12px;  /* Ancho de la barra de desplazamiento */
@@ -351,26 +366,38 @@ body {
 .gallery {
     background-color: #1E1C1C;
     color: #fff;
-    padding-bottom: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 .gallery .row {
-    margin-right: 0;
-    margin-left: 0;
+    margin: 0;
+    width: 100%;
 }
 
-.gallery .col-md-3 {
+.gallery .col-md-3,
+.gallery .col-12 {
     padding: 0;
-}
-
-.gallery .col-md-12 {
-    padding: 50px;
+    margin: 0;
 }
 
 .gallery img {
     width: 100%;
-    height: 400px;
-    object-fit: cover;
+    height: 425px;
+    display: block;
+}
+
+.vinilos-fotos .col-md-3,
+.cd-fotos .col-md-3 {
+    padding: 0;
+    margin: 0;
+}
+
+.vinilos-fotos .col-md-3 a,
+.cd-fotos .col-md-3 a {
+    display: block;
+    padding: 0;
+    margin: 0;
 }
 
 .gallery h2 {
@@ -378,22 +405,10 @@ body {
     font-weight: bold;
     text-align: center;
     color: #ffffff;
-    margin-top: 0px;
+    margin-top: 0;
+    padding: 50px 0;
 }
 
-.gallery img:hover {
-    filter: brightness(70%);
-    transition: filter 0.3s ease;
-}
-
-.lb-data .lb-caption {
-    width: 100%;
-    text-align: center;
-    color: #fff;
-    padding: 10px;
-    font-size: 14px;
-    margin-top: 10px;
-}
 
 #imageCarousel .carousel-item {
     height: 500px;
@@ -624,6 +639,90 @@ footer {
     }
 }
 
+/* Responsive para 320px */
+@media (max-width: 320px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #333;
+        color: #000;
+        transition: top 0.3s;
+    }
+    .header {
+        height: 50vh;
+    }
+    .carousel-item {
+        height: 50vh;
+    }
+    .carousel-caption {
+        font-size: 12px;
+    }
+    .gallery .row {
+        display: flex;
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+        padding: 10px; /* Añade padding alrededor de la galería */
+    }
+    .gallery .col-md-3, .gallery .col-12 {
+        flex: 1 0 100%; /* Cada imagen ocupará el 100% del ancho */
+        margin-bottom: 10px; /* Añade margen inferior entre las imágenes */
+    }
+    .gallery img {
+        width: 100%; /* Asegura que las imágenes ocupen el 100% del ancho disponible */
+        height: auto; /* Mantén la altura automática */
+    }
+    .gallery h2 {
+        font-size: 18px; /* Reduce el tamaño de fuente */
+        margin: 10px 0; /* Añade margen para separar el título del contenido */
+    }
+    .gallery {
+        padding: 10px; /* Reduce el padding en pantallas pequeñas */
+    }
+    .carousel-fixed-text h1,
+    .carousel-fixed-text p {
+        font-size: 1rem;
+    }
+    .merch-section h2 {
+        font-size: 28px;
+    }
+    .contact-container {
+        flex-direction: column-reverse;
+    }
+    .contact-info {
+        width: 100%;
+    }
+    .contact-image {
+        width: 100%;
+    }
+    .contact-info h2 {
+        font-size: 1.8rem;
+    }
+    .products .product-item {
+        width: 100%;
+    }
+    .contact-info form {
+        margin-top: 20px;
+    }
+    .contact-info input[type="text"],
+    .contact-info input[type="email"],
+    .contact-info textarea {
+        width: 100%;
+    }
+    .contact-info button {
+        margin-top: 20px;
+    }
+    .contact-info label {
+        margin-bottom: 10px;
+    }
+    .contact-info p {
+        margin-bottom: 10px;
+    }
+
+    .user-icon{
+        display: none;
+    }
+}
+
 /* Responsive para 425px */
 @media (max-width: 425px) {
     .navbar {
@@ -643,8 +742,25 @@ footer {
     .carousel-caption {
         font-size: 12px;
     }
-    .gallery .col-md-12 {
-        padding: 30px;
+    .gallery .row {
+        display: flex;
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+        padding: 10px; /* Añade padding alrededor de la galería */
+    }
+    .gallery .col-md-3, .gallery .col-12 {
+        flex: 1 0 100%; /* Cada imagen ocupará el 100% del ancho */
+        margin-bottom: 10px; /* Añade margen inferior entre las imágenes */
+    }
+    .gallery img {
+        width: 100%; /* Asegura que las imágenes ocupen el 100% del ancho disponible */
+        height: auto; /* Mantén la altura automática */
+    }
+    .gallery h2 {
+        font-size: 20px; /* Reduce el tamaño de fuente */
+        margin: 10px 0; /* Añade margen para separar el título del contenido */
+    }
+    .gallery {
+        padding: 10px; /* Reduce el padding en pantallas pequeñas */
     }
     .carousel-fixed-text h1,
     .carousel-fixed-text p {
@@ -739,6 +855,16 @@ footer {
         flex-direction: column;
         align-items: flex-start;
     }
+    .gallery .col-md-3 {
+        flex: 1 0 48%; /* Ajusta el ancho al 48% para dos columnas */
+        margin-bottom: 2%; /* Añade un poco de margen inferior */
+    }
+    .gallery img {
+        height: auto; /* Mantén la altura automática */
+    }
+    .gallery h2 {
+        font-size: 24px; /* Ajusta el tamaño de fuente */
+    }
 }
 
 /* Responsive para 1024px */
@@ -792,5 +918,15 @@ footer {
     .footer-container {
         flex-direction: row;
         align-items: center;
+    }
+    .gallery .col-md-3 {
+        flex: 1 0 48%; /* Ajusta el ancho al 48% para dos columnas */
+        margin-bottom: 2%; /* Añade un poco de margen inferior */
+    }
+    .gallery img {
+        height: auto; /* Mantén la altura automática */
+    }
+    .gallery h2 {
+        font-size: 28px; /* Ajusta el tamaño de fuente para pantallas más pequeñas */
     }
 }
