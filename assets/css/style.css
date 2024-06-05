@@ -363,6 +363,13 @@ body {
     border: 4px solid #000;
 }
 
+.btn-flecha {
+    font-size: 1.5em;
+}
+
+.btn-flecha:hover {
+    background-color: #444;
+}
 
 
 @media (max-width: 768px) {
