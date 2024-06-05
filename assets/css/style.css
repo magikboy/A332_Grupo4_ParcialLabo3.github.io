@@ -3,7 +3,7 @@ html, body {
     padding: 0;
     width: 100%;
     overflow-x: hidden; /* Oculta el desbordamiento horizontal */
-    cursor: url('/assets/cursor/1.png'), auto;
+    /* cursor: url('/assets/cursor/1.png'), auto; */
 }
 
 .container, .navbar, .nav-container, .menu-items, .header, .gallery, .merch-section, .contact-container, footer {

@@ -53,7 +53,7 @@
                     <li><a href="#">Contacto</a></li>
                 </div>
                 <div class="user-icon">
-                    <img src="assets\img\user\usericon.png" alt="User Icon">
+                    <a href="#" data-toggle="modal" data-target="#modal-login"><img src="assets/img/user/usericon.png" alt="User Icon"></a>
                 </div>
             </div>
         </div>
@@ -343,7 +343,7 @@
         <footer>
             <div class="footer-container">
                 <div class="footer-section logo-section">
-                    <img src="assets\img\favicon\android-chrome-512x512.png" alt="Vinyl Vault">
+                    <img src="assets/img/favicon/android-chrome-512x512.png" alt="Vinyl Vault">
                     <h4>Vinyl Vault</h4>
                 </div>
                 <div class="footer-section">
@@ -378,16 +378,119 @@
             </div>
         </footer>
 
+        <!-- Modal de Login -->
+        <div class="modal fade modal-fondo-negro" id="modal-login">
+            <div class="modal-dialog modal-dialog">
+                <div class="modal-content text-center">
+                    <!-- Encabezado del modal -->
+                    <div class="modal-header border-bottom-0">
+                        <h4 class="modal-title w-100" style="font-size: 18px;">Logearse</h4>
+                        <button type="button" class="close btn-minimalista" data-dismiss="modal">&times;</button>
+                    </div>
+        
+                    <!-- Cuerpo del modal -->
+                    <div class="modal-body">
+                        <!-- Formulario de Login -->
+                        <form id="logear" action="" method="POST">
+                            <!-- Formulario de Login -->
+                            <input type="hidden" name="formulario" value="logear">
+        
+                            <div class="form-group">
+                                <input type="text" name="Usuario" class="form-control input-lg" placeholder="Usuario" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="Contraseña" class="form-control input-lg" placeholder="Contraseña" required>
+                            </div>
+        
+                            <!-- Botón de enviar -->
+                            <button type="submit" class="btn btn-primary btn-block" style="background-color: #f80000; color: #ffffff;">Entrar</button>
+                        </form>
+                    </div>
+        
+                    <!-- Pie del modal (botones de Enviar y Cerrar) -->
+                    <div class="modal-footer" style="justify-content: center;">
+                        <b>¿No tenes cuenta? <a href="#" data-toggle="modal" data-target="#modal-registrar">Registrate</a></b>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de Registrar -->
+        <div class="modal fade modal-fondo-negro" id="modal-registrar">
+            <div class="modal-dialog modal-dialog">
+                <div class="modal-content text-center">
+                    <!-- Encabezado del modal -->
+                    <div class="modal-header border-bottom-0">
+                        <h4 class="modal-title w-100" style="font-size: 18px;">Registrarse</h4>
+                        <button type="button" class="close btn-minimalista" data-dismiss="modal">&times;</button>
+                    </div>
+        
+                    <!-- Cuerpo del modal -->
+                    <div class="modal-body">
+                        <!-- Formulario de Registrar -->
+                        <form id="registrarse" action="" method="POST">
+                            <!-- Formulario de Registrar -->
+                            <input type="hidden" name="formulario" value="registrarse">
+        
+                            <div class="form-group">
+                                <input type="text" name="Usuario" class="form-control input-lg" placeholder="Usuario" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="Contraseña" class="form-control input-lg" placeholder="Contraseña" required>
+                            </div>
+                        </form>
+                        <div class="modal-footer" style="justify-content: center;">
+                            <button type="submit" class="btn btn-primary btn-block" style="background-color: #f80000; color: #ffffff;">Crear</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
-    <!--Scripts -->
+    <!--#########-->
+    <!-- Scripts -->
+    <!--#########-->
+
+    <!-- MODAL -->
+    <script>
+        // Función para abrir el modal login
+        document.getElementById("abrir-modal").addEventListener("click", function() {
+            document.getElementById("modal-login").style.display = "block";
+        });
+  
+        // Función para cerrar el modal login
+        document.getElementById("cerrar-modal").addEventListener("click", function() {
+            document.getElementById("modal-login").style.display = "none";
+        });
+
+        // Función para abrir el modal registrar
+        document.getElementById("abrir-modal").addEventListener("click", function() {
+            document.getElementById("modal-registrar").style.display = "block";
+        });
+  
+        // Función para cerrar el modal registrar
+        document.getElementById("cerrar-modal").addEventListener("click", function() {
+            document.getElementById("modal-registrar").style.display = "none";
+        });
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- END MODAL -->
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
 
     <script src="assets/js/jquery.fancybox.min.js"></script>
+
+    <!--#############-->
     <!-- End Scripts -->
+    <!--#############-->
 </body>
 
 </html>
