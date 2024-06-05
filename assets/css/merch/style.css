@@ -1,0 +1,1027 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Oculta el desbordamiento horizontal */
+}
+
+.container, .navbar, .nav-container, .menu-items, .header, .gallery, .merch-section, .contact-container, footer {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+@font-face {
+    font-family: 'TAN-NIMBUS';
+    src: url('/assets/fonts/TAN-NIMBUS.ttf') format('truetype');
+}
+
+body {
+    font-family: 'TAN-NIMBUS', sans-serif !important;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+.navbar {
+    background-color: #1E1C1C;
+    width: 100%;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+    position: relative;
+    z-index: 1100;
+}
+
+.navbar .menu-items {
+    padding-top: 120px;
+    background-color: #1E1C1C;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+}
+
+
+.navbar .nav-container li {
+    list-style: none;
+}
+
+.navbar .nav-container a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 0.7rem;
+}
+
+.navbar .nav-container a:hover {
+    font-weight: bolder;
+}
+
+.nav-container {
+    display: block;
+    position: relative;
+    height: 60px;
+}
+
+.nav-container .checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    right: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.nav-container .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+.nav-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.navbar .menu-items {
+    padding-top: 120px;
+    background-color: #1E1C1C;
+    height: 100vh;
+    width: 100%;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 50px;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+}
+
+.navbar .menu-items li {
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: rgb(255, 255, 255);
+    z-index: 10;
+    margin-top: 10px;
+}
+
+.logo h3 {
+    font-weight: 50;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+
+.nav-container input[type="checkbox"]:checked~.menu-items {
+    transform: translateX(0);
+}
+
+.nav-container input[type="checkbox"]:checked~.hamburger-lines .line1 {
+    transform: rotate(45deg);
+}
+
+.nav-container input[type="checkbox"]:checked~.hamburger-lines .line2 {
+    transform: scaleY(0);
+}
+
+.nav-container input[type="checkbox"]:checked~.hamburger-lines .line3 {
+    transform: rotate(-45deg);
+}
+
+.user-icon {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    margin-right:50px;
+}
+
+.user-icon img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+
+
+/* Personaliza la barra de desplazamiento completa */
+::-webkit-scrollbar {
+    width: 12px;  /* Ancho de la barra de desplazamiento */
+    background-color: #f9f9f9;  /* Color de fondo */
+}
+
+/* Personaliza el manejador de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+    background-color: #000000;  /* Color del manejador */
+    border-radius: 6px;  /* Redondea las esquinas del manejador */
+    border: 3px solid #f9f9f9;  /* Borde del manejador */
+}
+
+/* Personaliza el rastro del manejador (parte por la que ya se deslizó) */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;  /* Sombra interna en la pista */
+    border-radius: 10px;  /* Redondea las esquinas de la pista */
+}
+
+/* Personaliza el botón de la barra de desplazamiento (arriba y abajo) */
+::-webkit-scrollbar-button {
+    display: block;
+    height: 2px;
+    background-color: #000000;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    z-index: 1000;
+    cursor: pointer;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    opacity: 0.7;
+    transition: opacity 0.3s, display 0.3s ease-in-out;
+}
+
+.scroll-to-top:hover {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #333;
+        color: #000000;
+        transition: top 0.3s;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        color: #000000;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover,
+    .navbar-light .navbar-nav .nav-link:focus {
+        color: #000000;
+    }
+
+    .navbar-light .navbar-nav .active > .nav-link,
+    .navbar-light .navbar-nav .nav-link.active,
+    .navbar-light .navbar-nav .nav-link.show,
+    .navbar-light .navbar-nav .show > .nav-link {
+        color: #ffffff;
+    }
+}
+
+.header {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item {
+    height: 100vh;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+.carousel-caption {
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.carousel-fixed-text {
+    position: absolute;
+    top: 30%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.carousel-fixed-text h1,
+.carousel-fixed-text p {
+    margin: 0;
+    padding: 0.5em 1em;
+    color: rgb(255, 255, 255);
+}
+
+.carousel-fixed-text p {
+    color: rgb(172, 172, 172);
+}
+
+.carousel-fixed-text .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-fixed-text .btn:hover {
+    font-size: 18px;
+    padding: 10px 20px;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    transform: scale(1.01);
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 50vh;
+    }
+
+    .carousel-item {
+        height: 50vh;
+    }
+
+    .carousel-caption {
+        font-size: 12px;
+    }
+}
+
+.gallery .container-fluid {
+    padding: 0; /* Establece el padding a 0 */
+}
+
+.gallery {
+    background-color: #1E1C1C;;
+    color: #fff;
+    padding: 0;
+    margin: 0px;
+
+}
+
+.gallery .row {
+    margin: 0;
+    width: 100%;
+
+
+}
+
+.gallery .col-md-3,
+.gallery .col-12 {
+    padding: 5px;
+    margin: 0px;
+    background-color: #1E1C1C;
+
+
+}
+
+.col-12 .col-md-12
+{
+    border: 1px solid white;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: rgb(246, 217, 143);
+}
+
+.gallery img {
+    transition: transform 0.3s;
+    width: 100%;
+    height: auto;
+    display: block;
+    padding-bottom: 20px;
+    border-radius: 8px;
+    
+}
+
+.gallery .img-fluid:hover {
+    transform: scale(1.05);
+    border-radius: 8px;
+    
+    cursor: pointer;
+}
+
+.vinilos-fotos .col-md-3,
+.cd-fotos .col-md-3 {
+    padding: 30px;
+}
+
+.col-12 .col-md-3
+{
+    padding: 10px;
+    margin: 50px;
+}
+.vinilos-fotos .col-md-3 a,
+.cd-fotos .col-md-3 a {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.gallery h4 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    margin: 10px;
+
+}
+
+
+.gallery h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 0;
+    padding: 50px 0;
+
+}
+
+
+#imageCarousel .carousel-item {
+    height: 500px;
+}
+
+#imageCarousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(90%);
+}
+
+
+
+.merch-section {
+    padding: 50px 0;
+    background-color: #1E1C1C;
+    color: #fff;
+}
+
+
+.merch-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+
+.remera {
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+.merch-section .img-fluid {
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    max-width: 100%;
+    transition: transform 0.3s;
+}
+
+
+.merch-section .img-center1 {
+    transition: transform 0.3s;
+    margin-top: 60px;
+    margin-left: 80px;
+}
+
+
+.merch-section .img-center2 {
+    transition: transform 0.3s;
+    margin-top: 250px;
+    margin-left: -190px;
+}
+
+
+.merch-center1 {   
+    padding: 0;
+}
+
+
+.merch-center2 {    
+    display: flex;
+    padding: 0;
+}
+
+
+.bg-color1, .bg-color4 {
+    background-color: rgb(205, 103, 80);
+}
+
+
+.bg-color2 {
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(246, 217, 143);
+}
+
+
+.bg-color3 {
+    background-color: rgb(246, 217, 143);
+}
+
+
+.merch-section .img-fluid:hover {
+    transform: scale(1.05);
+}
+
+.merch-section .btn {
+    font-size: 18px;
+    padding: 10px 20px;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+
+.merch-section .btn:hover {
+    background-color: #ffffff;
+    transform: scale(1.01);
+}
+
+.contact-container {
+    display: flex;
+    height: 100%;
+}
+
+.contact-image {
+    width: 50%;
+}
+
+.contact-image iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.contact-info {
+    width: 50%;
+    background-color: #1E1C1C;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-info h2 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.contact-info label {
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.contact-info form {
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+    width: 100%;
+    margin: 0;
+}
+
+.contact-info input[type="text"],
+.contact-info input[type="email"],
+.contact-info textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.contact-info input[type="text"]::placeholder,
+.contact-info input[type="email"]::placeholder,
+.contact-info textarea::placeholder {
+    color: #666;
+}
+
+.contact-info button {
+    font-size: 18px;
+    padding: 10px 20px;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-info button:hover {
+    background-color: #ffffff;
+    transform: scale(1.01);
+}
+
+#newImageCarousel .carousel-item {
+    height: 500px;
+}
+
+#newImageCarousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(90%);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer-section.logo-section img {
+    max-width: 100px; /* Ajusta el tamaño máximo del logo */
+    height: auto; /* Mantiene la relación de aspecto */
+}
+
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+.footer-section .social-media {
+    display: flex;
+    gap: 10px;
+}
+
+
+.footer-section .social-media img {
+    width: 30px;
+    height: 30px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}
+
+.footer-bottom a {
+    color: #cda45e;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #b3924f;
+}
+
+@media (max-width: 600px) {
+    .products .product-item {
+        width: 100%;
+    }
+}
+
+/* Responsive para 320px */
+@media (max-width: 320px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #333;
+        color: #000;
+        transition: top 0.3s;
+    }
+    .header {
+        height: 50vh;
+    }
+    .carousel-item {
+        height: 50vh;
+    }
+    .carousel-caption {
+        font-size: 12px;
+    }
+    .gallery .row {
+        
+        display: flex;
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+        padding: 10px; /* Añade padding alrededor de la galería */
+    }
+    .gallery .col-md-3, .gallery .col-12 {
+        flex: 1 0 100%; /* Cada imagen ocupará el 100% del ancho */
+        margin-bottom: 10px; /* Añade margen inferior entre las imágenes */
+    }
+    .gallery img {
+        width: 100%; /* Asegura que las imágenes ocupen el 100% del ancho disponible */
+        height: auto; /* Mantén la altura automática */
+    }
+    .gallery h2 {
+        font-size: 18px; /* Reduce el tamaño de fuente */
+        margin: 10px 0; /* Añade margen para separar el título del contenido */
+    }
+    .gallery {
+        padding: 10px; /* Reduce el padding en pantallas pequeñas */
+    }
+    .carousel-fixed-text h1,
+    .carousel-fixed-text p {
+        font-size: 1rem;
+    }
+    .merch-section h2 {
+        font-size: 28px;
+    }
+    .contact-container {
+        flex-direction: column-reverse;
+    }
+    .contact-info {
+        width: 100%;
+    }
+    .contact-image {
+        width: 100%;
+    }
+    .contact-info h2 {
+        font-size: 1.8rem;
+    }
+    .products .product-item {
+        width: 100%;
+    }
+    .contact-info form {
+        margin-top: 20px;
+    }
+    .contact-info input[type="text"],
+    .contact-info input[type="email"],
+    .contact-info textarea {
+        width: 100%;
+    }
+    .contact-info button {
+        margin-top: 20px;
+    }
+    .contact-info label {
+        margin-bottom: 10px;
+    }
+    .contact-info p {
+        margin-bottom: 10px;
+    }
+
+    .user-icon{
+        display: none;
+    }
+}
+
+/* Responsive para 425px */
+@media (max-width: 425px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #333;
+        color: #000;
+        transition: top 0.3s;
+    }
+    .header {
+        height: 50vh;
+    }
+    .carousel-item {
+        height: 50vh;
+    }
+    .carousel-caption {
+        font-size: 12px;
+    }
+    .gallery .row {
+        display: flex;
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+        padding: 10px; /* Añade padding alrededor de la galería */
+    }
+    .gallery .col-md-3, .gallery .col-12 {
+        flex: 1 0 100%; /* Cada imagen ocupará el 100% del ancho */
+        margin-bottom: 10px; /* Añade margen inferior entre las imágenes */
+    }
+    .gallery img {
+        width: 100%; /* Asegura que las imágenes ocupen el 100% del ancho disponible */
+        height: auto; /* Mantén la altura automática */
+    }
+    .gallery h2 {
+        font-size: 20px; /* Reduce el tamaño de fuente */
+        margin: 10px 0; /* Añade margen para separar el título del contenido */
+    }
+    .gallery {
+        padding: 10px; /* Reduce el padding en pantallas pequeñas */
+    }
+    .carousel-fixed-text h1,
+    .carousel-fixed-text p {
+        font-size: 1rem;
+    }
+    .merch-section h2 {
+        font-size: 30px;
+    }
+    .contact-container {
+        flex-direction: column-reverse;
+    }
+    .contact-info {
+        width: 100%;
+    }
+    .contact-image {
+        width: 100%;
+    }
+    .contact-info h2 {
+        font-size: 2rem;
+    }
+    .products .product-item {
+        width: 100%;
+    }
+    .contact-info form {
+        margin-top: 20px;
+    }
+    .contact-info input[type="text"],
+    .contact-info input[type="email"],
+    .contact-info textarea {
+        width: 100%;
+    }
+    .contact-info button {
+        margin-top: 20px;
+    }
+    .contact-info label {
+        margin-bottom: 10px;
+    }
+    .contact-info p {
+        margin-bottom: 10px;
+    }
+}
+
+/* Responsive para 768px */
+@media (max-width: 768px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #333;
+        color: #000;
+        transition: top 0.3s;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        color: #000;
+    }
+    .navbar-light .navbar-nav .nav-link:hover,
+    .navbar-light .navbar-nav .nav-link:focus {
+        color: #000;
+    }
+    .navbar-light .navbar-nav .active > .nav-link,
+    .navbar-light .navbar-nav .nav-link.active,
+    .navbar-light .navbar-nav .nav-link.show,
+    .navbar-light .navbar-nav .show > .nav-link {
+        color: #fff;
+    }
+    .header {
+        height: 50vh;
+    }
+    .carousel-item {
+        height: 50vh;
+    }
+    .carousel-caption {
+        font-size: 12px;
+    }
+    .gallery .col-md-12 {
+        padding: 40px;
+    }
+    .carousel-fixed-text h1,
+    .carousel-fixed-text p {
+        font-size: 1.2rem;
+    }
+    .merch-section h2 {
+        font-size: 32px;
+    }
+    .contact-info h2 {
+        font-size: 2.2rem;
+    }
+    .products .product-item {
+        width: 100%;
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .gallery .col-md-3 {
+        flex: 1 0 48%; /* Ajusta el ancho al 48% para dos columnas */
+        margin-bottom: 2%; /* Añade un poco de margen inferior */
+    }
+    .gallery img {
+        height: auto; /* Mantén la altura automática */
+    }
+    .gallery h2 {
+        font-size: 24px; /* Ajusta el tamaño de fuente */
+    }
+}
+
+/* Responsive para 1024px */
+@media (max-width: 1024px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #333;
+        color: #000;
+        transition: top 0.3s;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        color: #000;
+    }
+    .navbar-light .navbar-nav .nav-link:hover,
+    .navbar-light .navbar-nav .nav-link:focus {
+        color: #000;
+    }
+    .navbar-light .navbar-nav .active > .nav-link,
+    .navbar-light .navbar-nav .nav-link.active,
+    .navbar-light .navbar-nav .nav-link.show,
+    .navbar-light .navbar-nav .show > .nav-link {
+        color: #fff;
+    }
+    .header {
+        height: 70vh;
+    }
+    .carousel-item {
+        height: 70vh;
+    }
+    .carousel-caption {
+        font-size: 14px;
+    }
+    .gallery .col-md-12 {
+        padding: 45px;
+    }
+    .carousel-fixed-text h1,
+    .carousel-fixed-text p {
+        font-size: 1.4rem;
+    }
+    .merch-section h2 {
+        font-size: 34px;
+    }
+    .contact-info h2 {
+        font-size: 2.4rem;
+    }
+    .products .product-item {
+        width: 90%;
+    }
+    .footer-container {
+        flex-direction: row;
+        align-items: center;
+    }
+    .gallery .col-md-3 {
+        flex: 1 0 48%; /* Ajusta el ancho al 48% para dos columnas */
+        margin-bottom: 2%; /* Añade un poco de margen inferior */
+    }
+    .gallery img {
+        height: auto; /* Mantén la altura automática */
+    }
+    .gallery h2 {
+        font-size: 28px; /* Ajusta el tamaño de fuente para pantallas más pequeñas */
+    }
+}
