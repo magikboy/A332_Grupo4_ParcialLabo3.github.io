@@ -374,7 +374,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>Derechos reservados Vinyl Vault &copy; 2024 </p>
+                <p>Derechos reservados Vinyl Vault &copy; <span id="copyright-año"></span> </p>
             </div>
         </footer>
 
@@ -475,6 +475,13 @@
             document.getElementById("modal-registrar").style.display = "none";
         });
     </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var year = new Date().getFullYear();
+            document.getElementById("copyright-año").textContent = year;
+        });
+    </script>	
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
