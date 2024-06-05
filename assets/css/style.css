@@ -351,7 +351,7 @@ body {
     color: #000;
     text-decoration: none;
     border-radius: 25px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     border: 4px solid #000;
 }
 
@@ -359,10 +359,10 @@ body {
     color: #000000;
     background-color: #ffffff;
     border-radius: 25px;
-    transition: background-color 0.3s ease;
     transform: scale(1.01);
     border: 4px solid #000;
 }
+
 
 
 @media (max-width: 768px) {
