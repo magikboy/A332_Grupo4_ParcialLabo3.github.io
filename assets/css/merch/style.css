@@ -399,6 +399,24 @@ body {
     background-color: rgb(246, 217, 143);
 }
 
+.gallery .btn {
+    font-size: 40px;
+    position: relative;
+    top: -50px;
+    padding: 10px 30px;
+    color: #000000;
+    background-color: #ffffff;
+    border: 3px solid black;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+
+.gallery .btn:hover {
+    background-color: black;
+    transform: scale(1.01);
+}
+
 .gallery img {
     transition: transform 0.3s;
     width: 100%;
@@ -543,21 +561,6 @@ body {
     transform: scale(1.05);
 }
 
-.merch-section .btn {
-    font-size: 18px;
-    padding: 10px 20px;
-    color: #000000;
-    background-color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-}
-
-
-.merch-section .btn:hover {
-    background-color: #ffffff;
-    transform: scale(1.01);
-}
 
 .contact-container {
     display: flex;
