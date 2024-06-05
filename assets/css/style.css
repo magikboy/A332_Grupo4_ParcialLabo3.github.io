@@ -500,12 +500,16 @@ body {
 }
 
 .merch-section .btn {
-    font-size: 18px;
-    padding: 10px 20px;
+    border: 1px solid blue;
+    font-size: 40px;
+    position: relative;
+    top: -130px;
+    padding: 10px 30px;
     color: #000000;
     background-color: #ffffff;
-    border: none;
-    border-radius: 8px;
+    border: 3px solid black;
+    justify-content: center;
+    border-radius: 25px;
     transition: background-color 0.3s ease;
 }
 
