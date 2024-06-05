@@ -424,7 +424,6 @@ body {
 
 
 .merch-section {
-    border: 1px solid blue;
     padding: 50px 0;
     background-color: #1E1C1C;
     color: #fff;
@@ -464,7 +463,9 @@ body {
     transition: transform 0.3s;
     margin-top: 250px;
     margin-left: -190px;
+
 }
+
 
 
 .merch-center1 {   

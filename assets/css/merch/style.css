@@ -526,17 +526,20 @@ body {
     transition: transform 0.3s;
     margin-top: 250px;
     margin-left: -190px;
+
 }
 
 
 .merch-center1 {   
     padding: 0;
+    
 }
 
 
 .merch-center2 {    
     display: flex;
     padding: 0;
+
 }
 
 
