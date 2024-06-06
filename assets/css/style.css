@@ -3,6 +3,7 @@ html, body {
     padding: 0;
     width: 100%;
     overflow-x: hidden; /* Oculta el desbordamiento horizontal */
+    /* cursor: url('/assets/cursor/1.png'), auto; */
 }
 
 .container, .navbar, .nav-container, .menu-items, .header, .gallery, .merch-section, .contact-container, footer {
@@ -12,7 +13,7 @@ html, body {
 
 @font-face {
     font-family: 'TAN-NIMBUS';
-    src: url('/assets/fonts/TAN-NIMBUS.ttf') format('truetype');
+    src: url('/A332_Grupo4_ParcialLabo3.github.io/assets/fonts/TAN-NIMBUS.ttf') format('truetype');
 }
 
 body {
@@ -27,6 +28,9 @@ body {
 .navbar {
     background-color: #1E1C1C;
     width: 100%;
+    position: fixed !important;
+    top: 0;
+    z-index: 1000 !important;
 }
 
 .nav-container {
@@ -34,7 +38,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 62px;
-    position: relative;
+    position: relative; 
     z-index: 1100;
 }
 
@@ -53,7 +57,6 @@ body {
     transition: transform 0.5s ease-in-out;
     text-align: center;
 }
-
 
 .navbar .nav-container li {
     list-style: none;
@@ -312,42 +315,62 @@ body {
     left: 60%;
     transform: translate(-50%, -50%);
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     border-radius: 20px;
 }
 
 .carousel-fixed-text h1,
+.carousel-fixed-text h3,
 .carousel-fixed-text p {
     margin: 0;
-    padding: 0.5em 1em;
+    padding: 0.25em 1em;
     color: rgb(255, 255, 255);
 }
 
+.carousel-fixed-text h1 {
+    font-size: 4em;
+    text-shadow: 6px 6px 8px #000000;
+}
+
+.carousel-fixed-text h3 {
+    font-size: 2em;
+    text-shadow: 6px 6px 8px #000000;
+}
+
 .carousel-fixed-text p {
+    font-size: 1.5em;
     color: rgb(172, 172, 172);
+    text-shadow: 6px 6px 8px #000000;
 }
 
 .carousel-fixed-text .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 10px;
-    padding: 10px 20px;
+    padding: 15px 30px;
     background-color: #fff;
     color: #000;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 4px solid #000;
+    gap: 10px; /* Agrega espacio entre el texto y la imagen */
 }
 
 .carousel-fixed-text .btn:hover {
-    font-size: 18px;
-    padding: 10px 20px;
     color: #000000;
     background-color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: 25px;
     transform: scale(1.01);
+    border: 4px solid #000;
 }
+
+.btn-icon {
+    width: 20px;
+    height: 20px;
+}
+
 
 @media (max-width: 768px) {
     .header {
@@ -368,6 +391,10 @@ body {
     color: #fff;
     padding: 0px;
     margin: 0px;
+}
+
+.gallery .container-fluid {
+    padding: 0;
 }
 
 .gallery .row {
@@ -734,6 +761,9 @@ footer {
     .gallery {
         padding: 10px; /* Reduce el padding en pantallas pequeñas */
     }
+    .gallery .container-fluid {
+        padding: 0;
+    }
     .carousel-fixed-text h1,
     .carousel-fixed-text p {
         font-size: 1rem;
@@ -818,6 +848,9 @@ footer {
     .gallery {
         padding: 10px; /* Reduce el padding en pantallas pequeñas */
     }
+    .gallery .container-fluid {
+        padding: 0;
+    }
     .carousel-fixed-text h1,
     .carousel-fixed-text p {
         font-size: 1rem;
@@ -894,6 +927,9 @@ footer {
     .gallery .col-md-12 {
         padding: 40px;
     }
+    .gallery .container-fluid {
+        padding: 0;
+    }
     .carousel-fixed-text h1,
     .carousel-fixed-text p {
         font-size: 1.2rem;
@@ -957,6 +993,9 @@ footer {
     }
     .gallery .col-md-12 {
         padding: 45px;
+    }
+    .gallery .container-fluid {
+        padding: 0;
     }
     .carousel-fixed-text h1,
     .carousel-fixed-text p {
