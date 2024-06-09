@@ -3,7 +3,6 @@ html, body {
     padding: 0;
     width: 100%;
     overflow-x: hidden; /* Oculta el desbordamiento horizontal */
-    /* cursor: url('/assets/cursor/1.png'), auto; */
 }
 
 .container, .navbar, .nav-container, .menu-items, .header, .gallery, .merch-section, .contact-container, footer {
@@ -18,6 +17,22 @@ html, body {
 
 body {
     font-family: 'TAN-NIMBUS', sans-serif !important;
+}
+
+/* Evitar desbordamiento en el modal */
+body.modal-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+.modal-dialog {
+    max-width: 100%;
+    margin: auto;
+}
+
+.modal-content {
+    overflow-x: hidden;
 }
 
 .container {
