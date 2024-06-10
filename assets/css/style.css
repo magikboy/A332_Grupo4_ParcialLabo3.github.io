@@ -3,7 +3,6 @@ html, body {
     padding: 0;
     width: 100%;
     overflow-x: hidden; /* Oculta el desbordamiento horizontal */
-    cursor: url('/assets/cursor/1.png'), auto;
 }
 
 .container, .navbar, .nav-container, .menu-items, .header, .gallery, .merch-section, .contact-container, footer {
@@ -18,6 +17,22 @@ html, body {
 
 body {
     font-family: 'TAN-NIMBUS', sans-serif !important;
+}
+
+/* Evitar desbordamiento en el modal */
+body.modal-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+.modal-dialog {
+    max-width: 100%;
+    margin: auto;
+}
+
+.modal-content {
+    overflow-x: hidden;
 }
 
 .container {
@@ -389,8 +404,8 @@ body {
 .gallery {
     background-color: #1E1C1C;
     color: #fff;
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
 }
 
 .gallery .container-fluid {
@@ -448,6 +463,12 @@ body {
     filter: brightness(90%);
 }
 
+.merch-section .container {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
 
 .merch-section {
     padding: 50px 0;
@@ -455,21 +476,23 @@ body {
     color: #fff;
 }
 
+
 .merch-section h2 {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 30px;
 }
 
-.merch-section .row {
-    display: flex;
+
+.remera {
     justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 
+
 .merch-section .img-fluid {
+    margin: 5px;
     max-width: 100%;
-    height: auto;
     transition: transform 0.3s;
 }
 
@@ -477,20 +500,335 @@ body {
     transform: scale(1.05);
 }
 
+
+.merch-section .img-center1 {
+    transition: transform 0.3s;
+    padding-top: 120px;
+    padding-left: 10px;
+}
+
+
+.merch-section .img-center2 {
+    transition: transform 0.3s;
+    margin: 200px -50px;
+    padding-top: 180px
+}
+
+.merch-section .img-center3 {
+    position: absolute;
+    top: 23%;
+    left: 60%;
+    transform: rotate(25deg) translate(-50%, 10%);
+    height: 130px; /* Mantén la proporción */
+}
+
+.merch-section .img-center4 {
+    display: none;
+}
+
+.bg-color1, .bg-color4 {
+    background-color: rgb(205, 103, 80);
+}
+
+
+.bg-color2 {
+    background-color: rgb(246, 217, 143);
+}
+
+
+.bg-color3 {
+    background-color: rgb(246, 217, 143);
+}
+
 .merch-section .btn {
-    font-size: 18px;
-    padding: 10px 20px;
+    font-size: 20px;
+    position: relative;
+    padding: 10px 30px;
     color: #000000;
     background-color: #ffffff;
-    border: none;
-    border-radius: 5px;
+    border: 3px solid black;
+    border-radius: 25px;
     transition: background-color 0.3s ease;
 }
 
 .merch-section .btn:hover {
-    background-color: #ffffff;
+    background-color: black;
     transform: scale(1.01);
 }
+
+.gallery_Remeras .container-fluid {
+    padding: 0; /* Establece el padding a 0 */
+}
+
+.gallery_Remeras {
+    background-color: #1E1C1C;
+    color: #fff;
+    padding: 0;
+    margin: 0px;
+}
+
+.gallery_Remeras .row {
+    margin: 0;
+    width: 100%;
+}
+
+.gallery_Remeras .col-md-3,
+.gallery_Remeras .col-12 {
+    padding: 5px;
+    margin: 0px;
+    background-color: #1E1C1C;
+}
+
+.gallery_Remeras .col-12 .col-md-12 {
+    border: 1px solid white;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: rgb(246, 217, 143);
+}
+
+.gallery_Remeras .btn {
+    font-size: 20px;
+    position: relative;
+    top: -50px;
+    padding: 10px 30px;
+    color: #000000;
+    background-color: #ffffff;
+    border: 3px solid black;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.gallery_Remeras .btn:hover {
+    background-color: black;
+    transform: scale(1.01);
+}
+
+.gallery_Remeras .container-fluid {
+    padding: 0; /* Establece el padding a 0 */
+}
+
+.gallery_Remeras {
+    background-color: #1E1C1C;
+    color: #fff;
+    padding: 0;
+    margin: 0px;
+}
+
+.gallery_Remeras .row {
+    margin: 0;
+    width: 100%;
+}
+
+.gallery_Remeras .col-md-3,
+.gallery_Remeras .col-12 {
+    padding: 5px;
+    margin: 0px;
+    background-color: #1E1C1C;
+}
+
+.gallery_Remeras .col-12 .col-md-12 {
+    border: 1px solid white;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: rgb(246, 217, 143);
+}
+
+.gallery_Remeras .btn {
+    font-size: 20px;
+    position: relative;
+    top: -50px;
+    padding: 10px 30px;
+    color: #000000;
+    background-color: #ffffff;
+    border: 3px solid black;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.gallery_Remeras .btn:hover {
+    background-color: black;
+    transform: scale(1.01);
+}
+
+.gallery_Remeras img {
+    transition: transform 0.3s;
+    width: 100%;
+    height: auto;
+    display: block;
+    padding-bottom: 20px;
+    border-radius: 8px;
+}
+
+.gallery_Remeras .img-fluid:hover {
+    transform: scale(1.05);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.remeras-fotos .col-md-3 {
+    padding: 30px;
+}
+
+.gallery_Remeras .col-12 .col-md-3 {
+    padding: 10px;
+    margin: 50px;
+}
+
+.remeras-fotos .col-md-3 a {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.gallery_Remeras h4 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    margin: 10px;
+}
+
+.gallery_Remeras h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 50px;
+    padding: 50px 0;
+}
+
+/* Responsive para 320px */
+@media (max-width: 320px) {
+    .gallery_Remeras .row {
+        display: flex;
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+        padding: 10px; /* Añade padding alrededor de la galería */
+    }
+    .gallery_Remeras .col-md-3, .gallery_Remeras .col-12 {
+        flex: 1 0 100%; /* Cada imagen ocupará el 100% del ancho */
+        margin-bottom: 10px; /* Añade margen inferior entre las imágenes */
+    }
+    .gallery_Remeras img {
+        width: 100%; /* Asegura que las imágenes ocupen el 100% del ancho disponible */
+        height: auto; /* Mantén la altura automática */
+    }
+    .gallery_Remeras h2 {
+        font-size: 18px; /* Reduce el tamaño de fuente */
+        margin: 10px 0; /* Añade margen para separar el título del contenido */
+    }
+    .gallery_Remeras {
+        padding: 10px; /* Reduce el padding en pantallas pequeñas */
+    }
+
+    .merch-section .img-center4 {
+        position: absolute;
+        top: 10%;
+        left: 60%;
+        display: block;
+        height: 130px; /* Mantén la proporción */
+    }
+
+    .merch-section .img-center3 {
+        display: none;
+    }
+}
+
+/* Responsive para 425px */
+@media (max-width: 425px) {
+    .gallery_Remeras .row {
+        display: flex;
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+        padding: 10px; /* Añade padding alrededor de la galería */
+    }
+    .gallery_Remeras .col-md-3, .gallery_Remeras .col-12 {
+        flex: 1 0 100%; /* Cada imagen ocupará el 100% del ancho */
+        margin-bottom: 10px; /* Añade margen inferior entre las imágenes */
+    }
+    .gallery_Remeras img {
+        width: 100%; /* Asegura que las imágenes ocupen el 100% del ancho disponible */
+        height: auto; /* Mantén la altura automática */
+    }
+    .gallery_Remeras h2 {
+        font-size: 20px; /* Reduce el tamaño de fuente */
+        margin: 10px 0; /* Añade margen para separar el título del contenido */
+    }
+    .gallery_Remeras {
+        padding: 10px; /* Reduce el padding en pantallas pequeñas */
+    }
+
+    .merch-section .img-center4 {
+        position: absolute;
+        top: 10%;
+        left: -200%;
+        display: block;
+        height: 130px; /* Mantén la proporción */
+    }
+
+    .merch-section .img-center3 {
+        display: none;
+    }
+}
+
+/* Responsive para 768px */
+@media (max-width: 768px) {
+    .gallery_Remeras .col-md-12 {
+        padding: 40px;
+    }
+    .gallery_Remeras .col-md-3 {
+        flex: 1 0 48%; /* Ajusta el ancho al 48% para dos columnas */
+        margin-bottom: 2%; /* Añade un poco de margen inferior */
+    }
+    .gallery_Remeras img {
+        height: auto; /* Mantén la altura automática */
+    }
+    .gallery_Remeras h2 {
+        font-size: 24px; /* Ajusta el tamaño de fuente */
+    }
+
+    .merch-section .img-center4 {
+        position: absolute;
+        top: 10%;
+        left: 60%;
+        display: block;
+        transform: rotate(180deg);
+        height: 130px; /* Mantén la proporción */
+    }
+
+    .merch-section .img-center3 {
+        display: none;
+    }
+}
+
+/* Responsive para 1024px */
+@media (max-width: 1024px) {
+    .gallery_Remeras .col-md-12 {
+        padding: 45px;
+    }
+    .gallery_Remeras .col-md-3 {
+        flex: 1 0 48%; /* Ajusta el ancho al 48% para dos columnas */
+        margin-bottom: 2%; /* Añade un poco de margen inferior */
+    }
+    .gallery_Remeras img {
+        height: auto; /* Mantén la altura automática */
+    }
+    .gallery_Remeras h2 {
+        font-size: 28px; /* Ajusta el tamaño de fuente para pantallas más pequeñas */
+    }
+
+    .merch-section .img-center4 {
+        position: absolute;
+        top: 10%;
+        left: 60%;
+        display: block;
+        transform: rotate(180deg);
+        height: 130px; /* Mantén la proporción */
+    }
+
+    .merch-section .img-center3 {
+        display: none;
+    }
+}
+
 
 .contact-container {
     display: flex;
@@ -686,6 +1024,7 @@ footer {
         font-size: 12px;
     }
     .gallery .row {
+        
         display: flex;
         flex-direction: column; /* Cambia la dirección del flex a columna */
         padding: 10px; /* Añade padding alrededor de la galería */
@@ -969,3 +1308,65 @@ footer {
         font-size: 28px; /* Ajusta el tamaño de fuente para pantallas más pequeñas */
     }
 }
+
+.cs_cursor_lg,
+.cs_cursor_sm {
+  position: fixed;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  z-index: 9999;
+}
+@media (max-width: 991px) {
+  .cs_cursor_lg,
+  .cs_cursor_sm {
+    display: none !important;
+  }
+}
+
+.cs_cursor_lg {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transition: 0.15s;
+}
+.cs_cursor_lg.cs_large {
+  width: 60px;
+  height: 60px;
+  opacity: 0.15;
+}
+
+.cs_cursor_sm {
+  width: 8px;
+  height: 8px;
+  background-color: #fd6219;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transition: 0.2s;
+  opacity: 0;
+}
+
+.cs_portfolio.cs_style_1 .cs_portfolio_thumb {
+    display: block;
+    margin-bottom: 27px;
+  }
+  @media (max-width: 991px) {
+    .cs_portfolio.cs_style_1 .cs_portfolio_thumb {
+      margin-bottom: 10px;
+    }
+  }
+  .cs_portfolio.cs_style_1 .cs_portfolio_thumb img {
+    width: 100%;
+    border-radius: inherit;
+  }
+  .cs_portfolio.cs_style_1 .cs_portfolio_title {
+    margin-bottom: 8px;
+  }
+  @media (max-width: 991px) {
+    .cs_portfolio.cs_style_1 .cs_portfolio_title {
+      margin-bottom: 5px;
+    }
+  }
