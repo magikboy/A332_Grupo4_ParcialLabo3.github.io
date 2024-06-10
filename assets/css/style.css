@@ -463,7 +463,12 @@ body.modal-open {
     filter: brightness(90%);
 }
 
-
+.merch-section .container {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
 
 .merch-section {
     padding: 50px 0;
@@ -486,39 +491,31 @@ body.modal-open {
 
 
 .merch-section .img-fluid {
-    justify-content: center;
-    align-items: center;
     margin: 5px;
     max-width: 100%;
     transition: transform 0.3s;
 }
 
+.merch-section .img-fluid:hover {
+    transform: scale(1.05);
+}
+
 
 .merch-section .img-center1 {
     transition: transform 0.3s;
-    margin-top: 60px;
-    margin-left: 80px;
+    padding-top: 120px;
+    padding-left: 10px;
+    
+
 }
 
 
 .merch-section .img-center2 {
     transition: transform 0.3s;
-    margin-top: 250px;
-    margin-left: -190px;
-
+    margin: 50px -50px;
+    padding-top: 180px
 }
 
-
-
-.merch-center1 {   
-    padding: 0;
-}
-
-
-.merch-center2 {    
-    display: flex;
-    padding: 0;
-}
 
 
 .bg-color1, .bg-color4 {
@@ -527,8 +524,6 @@ body.modal-open {
 
 
 .bg-color2 {
-    align-items: center;
-    justify-content: center;
     background-color: rgb(246, 217, 143);
 }
 
@@ -538,29 +533,25 @@ body.modal-open {
 }
 
 
-.merch-section .img-fluid:hover {
-    transform: scale(1.05);
-}
+
 
 .merch-section .btn {
-    border: 1px solid blue;
     font-size: 40px;
     position: relative;
-    top: -130px;
     padding: 10px 30px;
     color: #000000;
     background-color: #ffffff;
     border: 3px solid black;
-    justify-content: center;
     border-radius: 25px;
     transition: background-color 0.3s ease;
 }
 
 
 .merch-section .btn:hover {
-    background-color: #ffffff;
+    background-color: black;
     transform: scale(1.01);
 }
+
 
 .contact-container {
     display: flex;
