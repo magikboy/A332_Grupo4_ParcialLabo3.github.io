@@ -510,8 +510,20 @@ body.modal-open {
 
 .merch-section .img-center2 {
     transition: transform 0.3s;
-    margin: 50px -50px;
+    margin: 200px -50px;
     padding-top: 180px
+}
+
+.merch-section .img-center3 {
+    position: absolute;
+    top: 23%;
+    left: 60%;
+    transform: rotate(25deg) translate(-50%, 10%);
+    height: 130px; /* Mantén la proporción */
+}
+
+.merch-section .img-center4 {
+    display: none;
 }
 
 .bg-color1, .bg-color4 {
@@ -707,6 +719,18 @@ body.modal-open {
     .gallery_Remeras {
         padding: 10px; /* Reduce el padding en pantallas pequeñas */
     }
+
+    .merch-section .img-center4 {
+        position: absolute;
+        top: 10%;
+        left: 60%;
+        display: block;
+        height: 130px; /* Mantén la proporción */
+    }
+
+    .merch-section .img-center3 {
+        display: none;
+    }
 }
 
 /* Responsive para 425px */
@@ -731,6 +755,18 @@ body.modal-open {
     .gallery_Remeras {
         padding: 10px; /* Reduce el padding en pantallas pequeñas */
     }
+
+    .merch-section .img-center4 {
+        position: absolute;
+        top: 10%;
+        left: -200%;
+        display: block;
+        height: 130px; /* Mantén la proporción */
+    }
+
+    .merch-section .img-center3 {
+        display: none;
+    }
 }
 
 /* Responsive para 768px */
@@ -748,6 +784,19 @@ body.modal-open {
     .gallery_Remeras h2 {
         font-size: 24px; /* Ajusta el tamaño de fuente */
     }
+
+    .merch-section .img-center4 {
+        position: absolute;
+        top: 10%;
+        left: 60%;
+        display: block;
+        transform: rotate(180deg);
+        height: 130px; /* Mantén la proporción */
+    }
+
+    .merch-section .img-center3 {
+        display: none;
+    }
 }
 
 /* Responsive para 1024px */
@@ -764,6 +813,19 @@ body.modal-open {
     }
     .gallery_Remeras h2 {
         font-size: 28px; /* Ajusta el tamaño de fuente para pantallas más pequeñas */
+    }
+
+    .merch-section .img-center4 {
+        position: absolute;
+        top: 10%;
+        left: 60%;
+        display: block;
+        transform: rotate(180deg);
+        height: 130px; /* Mantén la proporción */
+    }
+
+    .merch-section .img-center3 {
+        display: none;
     }
 }
 
@@ -1246,3 +1308,65 @@ footer {
         font-size: 28px; /* Ajusta el tamaño de fuente para pantallas más pequeñas */
     }
 }
+
+.cs_cursor_lg,
+.cs_cursor_sm {
+  position: fixed;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  z-index: 9999;
+}
+@media (max-width: 991px) {
+  .cs_cursor_lg,
+  .cs_cursor_sm {
+    display: none !important;
+  }
+}
+
+.cs_cursor_lg {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transition: 0.15s;
+}
+.cs_cursor_lg.cs_large {
+  width: 60px;
+  height: 60px;
+  opacity: 0.15;
+}
+
+.cs_cursor_sm {
+  width: 8px;
+  height: 8px;
+  background-color: #fd6219;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transition: 0.2s;
+  opacity: 0;
+}
+
+.cs_portfolio.cs_style_1 .cs_portfolio_thumb {
+    display: block;
+    margin-bottom: 27px;
+  }
+  @media (max-width: 991px) {
+    .cs_portfolio.cs_style_1 .cs_portfolio_thumb {
+      margin-bottom: 10px;
+    }
+  }
+  .cs_portfolio.cs_style_1 .cs_portfolio_thumb img {
+    width: 100%;
+    border-radius: inherit;
+  }
+  .cs_portfolio.cs_style_1 .cs_portfolio_title {
+    margin-bottom: 8px;
+  }
+  @media (max-width: 991px) {
+    .cs_portfolio.cs_style_1 .cs_portfolio_title {
+      margin-bottom: 5px;
+    }
+  }
