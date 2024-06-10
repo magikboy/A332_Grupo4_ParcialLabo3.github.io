@@ -1309,6 +1309,461 @@ footer {
     }
 }
 
+/*Vinilos*/
+.like-btn {
+    position: absolute;
+    top: 5px; 
+    right: 15%; 
+    width: 30px; 
+    height: 30px; 
+    cursor: pointer;
+    z-index: 1; 
+}
+
+.like-btn img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-1 {
+    position: absolute;
+    top: 420px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.like-btn-1 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-2 {
+    position: absolute;
+    top: 850px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.like-btn-2 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-3 {
+    position: absolute;
+    top: 1275px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.like-btn-3 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-4 {
+    position: absolute;
+    top: 5px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.like-btn-4 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-5 {
+    position: absolute;
+    top: 420px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.like-btn-5 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-6 {
+    position: absolute;
+    top: 850px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.like-btn-6 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-7 {
+    position: absolute;
+    top: 1275px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.like-btn-7 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-8 {
+    position: absolute;
+    top: 5px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.like-btn-8 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-9 {
+    position: absolute;
+    top: 420px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.like-btn-9 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-10 {
+    position: absolute;
+    top: 850px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.like-btn-10 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-11 {
+    position: absolute;
+    top: 1275px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.like-btn-11 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-12 {
+    position: absolute;
+    top: 5px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.like-btn-12 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-13 {
+    position: absolute;
+    top: 420px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.like-btn-13 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-14 {
+    position: absolute;
+    top: 850px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.like-btn-14 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-15 {
+    position: absolute;
+    top: 1275px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+.like-btn-15 img{
+    width: 100px;
+    height: 100px;
+}
+
+
+
+/*CD's*/
+.like-btn-16{
+    position: absolute;
+    top: 5px; 
+    right: 15%; 
+    width: 30px; 
+    height: 30px; 
+    cursor: pointer;
+    z-index: 1; 
+}
+
+.like-btn-16 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-17 {
+    position: absolute;
+    top: 420px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.like-btn-17 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-18 {
+    position: absolute;
+    top: 850px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.like-btn-18 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-19 {
+    position: absolute;
+    top: 1275px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.like-btn-19 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-20 {
+    position: absolute;
+    top: 5px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.like-btn-20 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-21 {
+    position: absolute;
+    top: 420px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.like-btn-21 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-22 {
+    position: absolute;
+    top: 850px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.like-btn-22 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-23 {
+    position: absolute;
+    top: 1275px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.like-btn-23 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-24 {
+    position: absolute;
+    top: 5px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.like-btn-24 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-25 {
+    position: absolute;
+    top: 420px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.like-btn-25 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-26 {
+    position: absolute;
+    top: 850px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.like-btn-26 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-27 {
+    position: absolute;
+    top: 1275px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.like-btn-27 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-28 {
+    position: absolute;
+    top: 5px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.like-btn-28 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-29 {
+    position: absolute;
+    top: 420px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.like-btn-29 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-30 {
+    position: absolute;
+    top: 850px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.like-btn-30 img{
+    width: 100px;
+    height: 100px;
+}
+.like-btn-31 {
+    position: absolute;
+    top: 1275px; 
+    right: 15%;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+.like-btn-31 img{
+    width: 100px;
+    height: 100px;
+}
+
+
+
+
 .cs_cursor_lg,
 .cs_cursor_sm {
   position: fixed;
