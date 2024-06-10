@@ -505,8 +505,6 @@ body.modal-open {
     transition: transform 0.3s;
     padding-top: 120px;
     padding-left: 10px;
-    
-
 }
 
 
@@ -515,8 +513,6 @@ body.modal-open {
     margin: 50px -50px;
     padding-top: 180px
 }
-
-
 
 .bg-color1, .bg-color4 {
     background-color: rgb(205, 103, 80);
@@ -532,11 +528,8 @@ body.modal-open {
     background-color: rgb(246, 217, 143);
 }
 
-
-
-
 .merch-section .btn {
-    font-size: 40px;
+    font-size: 20px;
     position: relative;
     padding: 10px 30px;
     color: #000000;
@@ -546,10 +539,232 @@ body.modal-open {
     transition: background-color 0.3s ease;
 }
 
-
 .merch-section .btn:hover {
     background-color: black;
     transform: scale(1.01);
+}
+
+.gallery_Remeras .container-fluid {
+    padding: 0; /* Establece el padding a 0 */
+}
+
+.gallery_Remeras {
+    background-color: #1E1C1C;
+    color: #fff;
+    padding: 0;
+    margin: 0px;
+}
+
+.gallery_Remeras .row {
+    margin: 0;
+    width: 100%;
+}
+
+.gallery_Remeras .col-md-3,
+.gallery_Remeras .col-12 {
+    padding: 5px;
+    margin: 0px;
+    background-color: #1E1C1C;
+}
+
+.gallery_Remeras .col-12 .col-md-12 {
+    border: 1px solid white;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: rgb(246, 217, 143);
+}
+
+.gallery_Remeras .btn {
+    font-size: 20px;
+    position: relative;
+    top: -50px;
+    padding: 10px 30px;
+    color: #000000;
+    background-color: #ffffff;
+    border: 3px solid black;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.gallery_Remeras .btn:hover {
+    background-color: black;
+    transform: scale(1.01);
+}
+
+.gallery_Remeras .container-fluid {
+    padding: 0; /* Establece el padding a 0 */
+}
+
+.gallery_Remeras {
+    background-color: #1E1C1C;
+    color: #fff;
+    padding: 0;
+    margin: 0px;
+}
+
+.gallery_Remeras .row {
+    margin: 0;
+    width: 100%;
+}
+
+.gallery_Remeras .col-md-3,
+.gallery_Remeras .col-12 {
+    padding: 5px;
+    margin: 0px;
+    background-color: #1E1C1C;
+}
+
+.gallery_Remeras .col-12 .col-md-12 {
+    border: 1px solid white;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: rgb(246, 217, 143);
+}
+
+.gallery_Remeras .btn {
+    font-size: 20px;
+    position: relative;
+    top: -50px;
+    padding: 10px 30px;
+    color: #000000;
+    background-color: #ffffff;
+    border: 3px solid black;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.gallery_Remeras .btn:hover {
+    background-color: black;
+    transform: scale(1.01);
+}
+
+.gallery_Remeras img {
+    transition: transform 0.3s;
+    width: 100%;
+    height: auto;
+    display: block;
+    padding-bottom: 20px;
+    border-radius: 8px;
+}
+
+.gallery_Remeras .img-fluid:hover {
+    transform: scale(1.05);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.remeras-fotos .col-md-3 {
+    padding: 30px;
+}
+
+.gallery_Remeras .col-12 .col-md-3 {
+    padding: 10px;
+    margin: 50px;
+}
+
+.remeras-fotos .col-md-3 a {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.gallery_Remeras h4 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    margin: 10px;
+}
+
+.gallery_Remeras h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 50px;
+    padding: 50px 0;
+}
+
+/* Responsive para 320px */
+@media (max-width: 320px) {
+    .gallery_Remeras .row {
+        display: flex;
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+        padding: 10px; /* Añade padding alrededor de la galería */
+    }
+    .gallery_Remeras .col-md-3, .gallery_Remeras .col-12 {
+        flex: 1 0 100%; /* Cada imagen ocupará el 100% del ancho */
+        margin-bottom: 10px; /* Añade margen inferior entre las imágenes */
+    }
+    .gallery_Remeras img {
+        width: 100%; /* Asegura que las imágenes ocupen el 100% del ancho disponible */
+        height: auto; /* Mantén la altura automática */
+    }
+    .gallery_Remeras h2 {
+        font-size: 18px; /* Reduce el tamaño de fuente */
+        margin: 10px 0; /* Añade margen para separar el título del contenido */
+    }
+    .gallery_Remeras {
+        padding: 10px; /* Reduce el padding en pantallas pequeñas */
+    }
+}
+
+/* Responsive para 425px */
+@media (max-width: 425px) {
+    .gallery_Remeras .row {
+        display: flex;
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+        padding: 10px; /* Añade padding alrededor de la galería */
+    }
+    .gallery_Remeras .col-md-3, .gallery_Remeras .col-12 {
+        flex: 1 0 100%; /* Cada imagen ocupará el 100% del ancho */
+        margin-bottom: 10px; /* Añade margen inferior entre las imágenes */
+    }
+    .gallery_Remeras img {
+        width: 100%; /* Asegura que las imágenes ocupen el 100% del ancho disponible */
+        height: auto; /* Mantén la altura automática */
+    }
+    .gallery_Remeras h2 {
+        font-size: 20px; /* Reduce el tamaño de fuente */
+        margin: 10px 0; /* Añade margen para separar el título del contenido */
+    }
+    .gallery_Remeras {
+        padding: 10px; /* Reduce el padding en pantallas pequeñas */
+    }
+}
+
+/* Responsive para 768px */
+@media (max-width: 768px) {
+    .gallery_Remeras .col-md-12 {
+        padding: 40px;
+    }
+    .gallery_Remeras .col-md-3 {
+        flex: 1 0 48%; /* Ajusta el ancho al 48% para dos columnas */
+        margin-bottom: 2%; /* Añade un poco de margen inferior */
+    }
+    .gallery_Remeras img {
+        height: auto; /* Mantén la altura automática */
+    }
+    .gallery_Remeras h2 {
+        font-size: 24px; /* Ajusta el tamaño de fuente */
+    }
+}
+
+/* Responsive para 1024px */
+@media (max-width: 1024px) {
+    .gallery_Remeras .col-md-12 {
+        padding: 45px;
+    }
+    .gallery_Remeras .col-md-3 {
+        flex: 1 0 48%; /* Ajusta el ancho al 48% para dos columnas */
+        margin-bottom: 2%; /* Añade un poco de margen inferior */
+    }
+    .gallery_Remeras img {
+        height: auto; /* Mantén la altura automática */
+    }
+    .gallery_Remeras h2 {
+        font-size: 28px; /* Ajusta el tamaño de fuente para pantallas más pequeñas */
+    }
 }
 
 
