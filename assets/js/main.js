@@ -44,6 +44,13 @@ function cursorMovingAnimation(event) {
         console.log(err);
     }
 }
-
+function toggleLike(element) {
+    const img = element.querySelector('img');
+    if (img.src.includes('corazonFalse.png')) {
+        img.src = 'assets/cursor/corazonTrue.png';
+    } else {
+        img.src = 'assets/cursor/corazonFalse.png';
+    }
+}
 // Agregar el evento de movimiento del mouse
 document.addEventListener('mousemove', cursorMovingAnimation);
