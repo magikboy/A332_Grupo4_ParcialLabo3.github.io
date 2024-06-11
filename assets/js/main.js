@@ -64,3 +64,24 @@ function toggleCarrito(element) {
 }
 // Agregar el evento de movimiento del mouse
 document.addEventListener('mousemove', cursorMovingAnimation);
+
+
+// Función para abrir el modal login
+document.getElementById("abrir-modal").addEventListener("click", function() {
+    document.getElementById("modal-login").style.display = "block";
+});
+
+// Función para cerrar el modal login
+document.getElementById("cerrar-modal").addEventListener("click", function() {
+    document.getElementById("modal-login").style.display = "none";
+});
+
+// Función para abrir el modal registrar
+document.getElementById("abrir-modal").addEventListener("click", function() {
+    document.getElementById("modal-registrar").style.display = "block";
+});
+
+// Función para cerrar el modal registrar
+document.getElementById("cerrar-modal").addEventListener("click", function() {
+    document.getElementById("modal-registrar").style.display = "none";
+});
