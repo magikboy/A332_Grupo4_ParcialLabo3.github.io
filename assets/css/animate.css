@@ -3286,3 +3286,17 @@ Copyright (c) 2015 Daniel Eden
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp;
 }
+
+/* MERCH*/
+
+@keyframes scaleAndRotate {
+  0% {
+    transform: rotate(25deg) translate(-50%, 10%) scale(1);
+  }
+  50% {
+    transform: rotate(20deg) translate(-50%, 10%) scale(1.1);
+  }
+  100% {
+    transform: rotate(25deg) translate(-50%, 10%) scale(1);
+  }
+}
