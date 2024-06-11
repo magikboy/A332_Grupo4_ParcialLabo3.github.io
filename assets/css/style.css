@@ -1,3 +1,33 @@
+
+/* GUIA */
+
+/* 1. General Reset y estilos del Body */
+/* 2. Font Face */
+/* 3. Estilos del Contenedor */
+/* 4. Estilos del Modal */
+/* 5. Estilos de la Barra de Navegación */
+/* 6. Estilos del Logo */
+/* 7. Checkbox para el Menú */
+/* 8. Estilos del Icono de Usuario */
+/* 9. Barra de Desplazamiento Personalizada */
+/* 10. Botón de Desplazamiento hacia Arriba */
+/* 11. Media Queries (Responsive) */
+/* 12. Estilos del Header */
+/* 13. Media Queries para el Header */
+/* 14. Estilos de la Galería */
+/* 15. Estilos del Carousel de Imágenes */
+/* 16. Estilos de la Sección de Merchandising */
+/* 17. Estilos de la Galería de Remeras */
+/* 18. Media Queries (Responsive para Galerías) */
+/* 19. Estilos de la Sección de Contacto */
+/* 20. Carousel de Imágenes */
+/* 21. Estilos del Footer */
+/* 22. Botones de Like */
+/* 23. Botones de Carrito */
+/* 24. Cursores Personalizados */
+
+
+/* 1. General Reset y estilos del Body */
 html, body {
     margin: 0;
     padding: 0;
@@ -5,21 +35,23 @@ html, body {
     overflow-x: hidden; /* Oculta el desbordamiento horizontal */
 }
 
-.container, .navbar, .nav-container, .menu-items, .header, .gallery, .merch-section, .contact-container, footer {
-    box-sizing: border-box;
-    max-width: 100%;
+body {
+    font-family: 'TAN-NIMBUS', sans-serif !important;
 }
 
+/* 2. Font Face */
 @font-face {
     font-family: 'TAN-NIMBUS';
     src: url('/A332_Grupo4_ParcialLabo3.github.io/assets/fonts/TAN-NIMBUS.ttf') format('truetype');
 }
 
-body {
-    font-family: 'TAN-NIMBUS', sans-serif !important;
+/* 3. Estilos del Contenedor */
+.container, .navbar, .nav-container, .menu-items, .header, .gallery, .merch-section, .contact-container, footer {
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
-/* Evitar desbordamiento en el modal */
+/* 4. Estilos del Modal */
 body.modal-open {
     overflow: hidden;
     position: fixed;
@@ -35,11 +67,7 @@ body.modal-open {
     overflow-x: hidden;
 }
 
-.container {
-    width: 100%;
-    margin: auto;
-}
-
+/* 5. Estilos de la Barra de Navegación */
 .navbar {
     background-color: #1E1C1C;
     width: 100%;
@@ -162,6 +190,7 @@ body.modal-open {
     font-weight: 500;
 }
 
+/* 6. Estilos del Logo */
 .logo {
     display: flex;
     align-items: center;
@@ -184,7 +213,7 @@ body.modal-open {
     margin-right: 10px;
 }
 
-
+/* 7. Checkbox para el Menú */
 .nav-container input[type="checkbox"]:checked~.menu-items {
     transform: translateX(0);
 }
@@ -201,6 +230,7 @@ body.modal-open {
     transform: rotate(-45deg);
 }
 
+/* 8. Estilos del Icono de Usuario */
 .user-icon {
     display: flex;
     align-items: center;
@@ -215,33 +245,30 @@ body.modal-open {
     object-fit: cover;
 }
 
-
-/* Personaliza la barra de desplazamiento completa */
+/* 9. Barra de Desplazamiento Personalizada */
 ::-webkit-scrollbar {
     width: 12px;  /* Ancho de la barra de desplazamiento */
     background-color: #f9f9f9;  /* Color de fondo */
 }
 
-/* Personaliza el manejador de la barra de desplazamiento */
 ::-webkit-scrollbar-thumb {
     background-color: #000000;  /* Color del manejador */
     border-radius: 6px;  /* Redondea las esquinas del manejador */
     border: 3px solid #f9f9f9;  /* Borde del manejador */
 }
 
-/* Personaliza el rastro del manejador (parte por la que ya se deslizó) */
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey;  /* Sombra interna en la pista */
     border-radius: 10px;  /* Redondea las esquinas de la pista */
 }
 
-/* Personaliza el botón de la barra de desplazamiento (arriba y abajo) */
 ::-webkit-scrollbar-button {
     display: block;
     height: 2px;
     background-color: #000000;
 }
 
+/* 10. Botón de Desplazamiento hacia Arriba */
 .scroll-to-top {
     position: fixed;
     bottom: 20px;
@@ -264,6 +291,7 @@ body.modal-open {
     opacity: 1;
 }
 
+/* 11. Media Queries (Responsive) */
 @media (max-width: 768px) {
     .navbar {
         position: fixed;
@@ -291,6 +319,7 @@ body.modal-open {
     }
 }
 
+/* 12. Estilos del Header */
 .header {
     height: 100vh;
     background-size: cover;
@@ -386,7 +415,7 @@ body.modal-open {
     height: 20px;
 }
 
-
+/* 13. Media Queries para el Header */
 @media (max-width: 768px) {
     .header {
         height: 50vh;
@@ -401,6 +430,7 @@ body.modal-open {
     }
 }
 
+/* 14. Estilos de la Galería */
 .gallery {
     background-color: #1E1C1C;
     color: #fff;
@@ -451,7 +481,7 @@ body.modal-open {
     padding: 50px 0;
 }
 
-
+/* 15. Estilos del Carousel de Imágenes */
 #imageCarousel .carousel-item {
     height: 550px;
 }
@@ -463,6 +493,7 @@ body.modal-open {
     filter: brightness(90%);
 }
 
+/* 16. Estilos de la Sección de Merchandising */
 .merch-section .container {
     width: 100%;
     height: 100%;
@@ -476,19 +507,16 @@ body.modal-open {
     color: #fff;
 }
 
-
 .merch-section h2 {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 30px;
 }
 
-
 .remera {
     justify-content: center;
     text-align: center;
 }
-
 
 .merch-section .img-fluid {
     margin: 5px;
@@ -500,18 +528,16 @@ body.modal-open {
     transform: scale(1.05);
 }
 
-
 .merch-section .img-center1 {
     transition: transform 0.3s;
     padding-top: 120px;
     padding-left: 10px;
 }
 
-
 .merch-section .img-center2 {
     transition: transform 0.3s;
     margin: 200px -50px;
-    padding-top: 180px
+    padding-top: 180px;
 }
 
 .merch-section .img-center3 {
@@ -530,11 +556,9 @@ body.modal-open {
     background-color: rgb(205, 103, 80);
 }
 
-
 .bg-color2 {
     background-color: rgb(246, 217, 143);
 }
-
 
 .bg-color3 {
     background-color: rgb(246, 217, 143);
@@ -556,53 +580,7 @@ body.modal-open {
     transform: scale(1.01);
 }
 
-.gallery_Remeras .container-fluid {
-    padding: 0; /* Establece el padding a 0 */
-}
-
-.gallery_Remeras {
-    background-color: #1E1C1C;
-    color: #fff;
-    padding: 0;
-    margin: 0px;
-}
-
-.gallery_Remeras .row {
-    margin: 0;
-    width: 100%;
-}
-
-.gallery_Remeras .col-md-3,
-.gallery_Remeras .col-12 {
-    padding: 5px;
-    margin: 0px;
-    background-color: #1E1C1C;
-}
-
-.gallery_Remeras .col-12 .col-md-12 {
-    border: 1px solid white;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    background-color: rgb(246, 217, 143);
-}
-
-.gallery_Remeras .btn {
-    font-size: 20px;
-    position: relative;
-    top: -50px;
-    padding: 10px 30px;
-    color: #000000;
-    background-color: #ffffff;
-    border: 3px solid black;
-    border-radius: 25px;
-    transition: background-color 0.3s ease;
-}
-
-.gallery_Remeras .btn:hover {
-    background-color: black;
-    transform: scale(1.01);
-}
-
+/* 17. Estilos de la Galería de Remeras */
 .gallery_Remeras .container-fluid {
     padding: 0; /* Establece el padding a 0 */
 }
@@ -697,7 +675,7 @@ body.modal-open {
     padding: 50px 0;
 }
 
-/* Responsive para 320px */
+/* 18. Media Queries (Responsive para Galerías) */
 @media (max-width: 320px) {
     .gallery_Remeras .row {
         display: flex;
@@ -733,7 +711,6 @@ body.modal-open {
     }
 }
 
-/* Responsive para 425px */
 @media (max-width: 425px) {
     .gallery_Remeras .row {
         display: flex;
@@ -769,7 +746,6 @@ body.modal-open {
     }
 }
 
-/* Responsive para 768px */
 @media (max-width: 768px) {
     .gallery_Remeras .col-md-12 {
         padding: 40px;
@@ -799,7 +775,6 @@ body.modal-open {
     }
 }
 
-/* Responsive para 1024px */
 @media (max-width: 1024px) {
     .gallery_Remeras .col-md-12 {
         padding: 45px;
@@ -829,7 +804,7 @@ body.modal-open {
     }
 }
 
-
+/* 19. Estilos de la Sección de Contacto */
 .contact-container {
     display: flex;
     height: 100%;
@@ -911,6 +886,7 @@ body.modal-open {
     transform: scale(1.01);
 }
 
+/* 20. Carousel de Imágenes */
 #newImageCarousel .carousel-item {
     height: 550px;
 }
@@ -922,6 +898,7 @@ body.modal-open {
     filter: brightness(90%);
 }
 
+/* 21. Estilos del Footer */
 footer {
     background-color: #333;
     color: white;
@@ -945,7 +922,6 @@ footer {
     max-width: 100px; /* Ajusta el tamaño máximo del logo */
     height: auto; /* Mantiene la relación de aspecto */
 }
-
 
 .footer-section h4 {
     margin-bottom: 10px;
@@ -974,7 +950,6 @@ footer {
     gap: 10px;
 }
 
-
 .footer-section .social-media img {
     width: 30px;
     height: 30px;
@@ -998,13 +973,14 @@ footer {
     color: #b3924f;
 }
 
+/* Media Queries para el Footer */
 @media (max-width: 600px) {
     .products .product-item {
         width: 100%;
     }
 }
 
-/* Responsive para 320px */
+/* Media Queries para 320px */
 @media (max-width: 320px) {
     .navbar {
         position: fixed;
@@ -1024,7 +1000,6 @@ footer {
         font-size: 12px;
     }
     .gallery .row {
-        
         display: flex;
         flex-direction: column; /* Cambia la dirección del flex a columna */
         padding: 10px; /* Añade padding alrededor de la galería */
@@ -1092,7 +1067,7 @@ footer {
     }
 }
 
-/* Responsive para 425px */
+/* Media Queries para 425px */
 @media (max-width: 425px) {
     .navbar {
         position: fixed;
@@ -1175,7 +1150,7 @@ footer {
     }
 }
 
-/* Responsive para 768px */
+/* Media Queries para 768px */
 @media (max-width: 768px) {
     .navbar {
         position: fixed;
@@ -1242,7 +1217,7 @@ footer {
     }
 }
 
-/* Responsive para 1024px */
+/* Media Queries para 1024px */
 @media (max-width: 1024px) {
     .navbar {
         position: fixed;
@@ -1309,461 +1284,73 @@ footer {
     }
 }
 
-/*Vinilos*/
+/* Vinilos y CD's */
+
+/* 22. Botones de Like */
 .like-btn {
     position: absolute;
-    top: 5px; 
-    right: 15%; 
-    width: 30px; 
-    height: 30px; 
-    cursor: pointer;
-    z-index: 1; 
-}
-
-.like-btn img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-1 {
-    position: absolute;
-    top: 420px; 
     right: 15%;
-    width: 30px; 
+    width: 30px;
     height: 30px;
     cursor: pointer;
     z-index: 1;
 }
 
-.like-btn-1 img{
+.like-btn img {
     width: 100px;
     height: 100px;
+    filter: drop-shadow(0 4px 8px rgba(247, 0, 0, 0.5)); /* Agrega sombra alrededor de la silueta */
 }
-.like-btn-2 {
+
+.like-btn[data-top="5px"] {
+    top: 5px;
+}
+
+.like-btn[data-top="420px"] {
+    top: 420px;
+}
+
+.like-btn[data-top="850px"] {
+    top: 850px;
+}
+
+.like-btn[data-top="1275px"] {
+    top: 1275px;
+}
+
+/* 23. Botones de Carrito */
+.Carrito-Btn {
     position: absolute;
-    top: 850px; 
-    right: 15%;
-    width: 30px; 
+    right: calc(15% + 380px);
+    width: 30px;
     height: 30px;
     cursor: pointer;
     z-index: 1;
 }
 
-.like-btn-2 img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-3 {
-    position: absolute;
-    top: 1275px; 
-    right: 15%;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
+.Carrito-Btn img {
+    width: 120px;
+    height: 120px;
+    filter: drop-shadow(0 4px 8px rgba(255, 247, 247, 0.5)); /* Agrega sombra alrededor de la silueta */
 }
 
-.like-btn-3 img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-4 {
-    position: absolute;
-    top: 5px; 
-    right: 15%;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
+.Carrito-Btn[data-top="5px"] {
+    top: -5px;
 }
 
-.like-btn-4 img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-5 {
-    position: absolute;
-    top: 420px; 
-    right: 15%;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
+.Carrito-Btn[data-top="420px"] {
+    top: 410px;
 }
 
-.like-btn-5 img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-6 {
-    position: absolute;
-    top: 850px; 
-    right: 15%;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
+.Carrito-Btn[data-top="850px"] {
+    top: 840px;
 }
 
-.like-btn-6 img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-7 {
-    position: absolute;
-    top: 1275px; 
-    right: 15%;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
+.Carrito-Btn[data-top="1275px"] {
+    top: 1265px;
 }
 
-.like-btn-7 img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-8 {
-    position: absolute;
-    top: 5px; 
-    right: 15%;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.like-btn-8 img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-9 {
-    position: absolute;
-    top: 420px; 
-    right: 15%;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.like-btn-9 img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-10 {
-    position: absolute;
-    top: 850px; 
-    right: 15%;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.like-btn-10 img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-11 {
-    position: absolute;
-    top: 1275px; 
-    right: 15%;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.like-btn-11 img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-12 {
-    position: absolute;
-    top: 5px; 
-    right: 15%;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.like-btn-12 img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-13 {
-    position: absolute;
-    top: 420px; 
-    right: 15%;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.like-btn-13 img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-14 {
-    position: absolute;
-    top: 850px; 
-    right: 15%;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.like-btn-14 img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-15 {
-    position: absolute;
-    top: 1275px; 
-    right: 15%;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
-}
-.like-btn-15 img{
-    width: 100px;
-    height: 100px;
-}
-
-
-
-/*CD's*/
-.like-btn-16{
-    position: absolute;
-    top: 5px; 
-    right: 15%; 
-    width: 30px; 
-    height: 30px; 
-    cursor: pointer;
-    z-index: 1; 
-}
-
-.like-btn-16 img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-17 {
-    position: absolute;
-    top: 420px; 
-    right: 15%;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.like-btn-17 img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-18 {
-    position: absolute;
-    top: 850px; 
-    right: 15%;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.like-btn-18 img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-19 {
-    position: absolute;
-    top: 1275px; 
-    right: 15%;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.like-btn-19 img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-20 {
-    position: absolute;
-    top: 5px; 
-    right: 15%;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.like-btn-20 img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-21 {
-    position: absolute;
-    top: 420px; 
-    right: 15%;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.like-btn-21 img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-22 {
-    position: absolute;
-    top: 850px; 
-    right: 15%;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.like-btn-22 img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-23 {
-    position: absolute;
-    top: 1275px; 
-    right: 15%;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.like-btn-23 img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-24 {
-    position: absolute;
-    top: 5px; 
-    right: 15%;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.like-btn-24 img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-25 {
-    position: absolute;
-    top: 420px; 
-    right: 15%;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.like-btn-25 img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-26 {
-    position: absolute;
-    top: 850px; 
-    right: 15%;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.like-btn-26 img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-27 {
-    position: absolute;
-    top: 1275px; 
-    right: 15%;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.like-btn-27 img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-28 {
-    position: absolute;
-    top: 5px; 
-    right: 15%;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.like-btn-28 img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-29 {
-    position: absolute;
-    top: 420px; 
-    right: 15%;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.like-btn-29 img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-30 {
-    position: absolute;
-    top: 850px; 
-    right: 15%;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.like-btn-30 img{
-    width: 100px;
-    height: 100px;
-}
-.like-btn-31 {
-    position: absolute;
-    top: 1275px; 
-    right: 15%;
-    width: 30px; 
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
-}
-.like-btn-31 img{
-    width: 100px;
-    height: 100px;
-}
-
-
-
-
+/* 24. Cursores Personalizados */
 .cs_cursor_lg,
 .cs_cursor_sm {
   position: fixed;
@@ -1771,6 +1358,7 @@ footer {
   mix-blend-mode: difference;
   z-index: 9999;
 }
+
 @media (max-width: 991px) {
   .cs_cursor_lg,
   .cs_cursor_sm {
@@ -1803,25 +1391,3 @@ footer {
   transition: 0.2s;
   opacity: 0;
 }
-
-.cs_portfolio.cs_style_1 .cs_portfolio_thumb {
-    display: block;
-    margin-bottom: 27px;
-  }
-  @media (max-width: 991px) {
-    .cs_portfolio.cs_style_1 .cs_portfolio_thumb {
-      margin-bottom: 10px;
-    }
-  }
-  .cs_portfolio.cs_style_1 .cs_portfolio_thumb img {
-    width: 100%;
-    border-radius: inherit;
-  }
-  .cs_portfolio.cs_style_1 .cs_portfolio_title {
-    margin-bottom: 8px;
-  }
-  @media (max-width: 991px) {
-    .cs_portfolio.cs_style_1 .cs_portfolio_title {
-      margin-bottom: 5px;
-    }
-  }

@@ -1,4 +1,4 @@
-// Agregar cursores al body
+/* Manejar el movimiento del cursor */
 $(function () {
     $('body').append('<span class="cs_cursor_lg"></span>');
     $('body').append('<span class="cs_cursor_sm"></span>');
@@ -13,12 +13,12 @@ $(function () {
         $('.cs_cursor_sm').removeClass('cs_large');
     });
 
-    // Manejar la entrada y salida del cursor sobre los elementos de portfolio
-    $('.cs_portfolio.cs_style_1>a, .cs_awaard.cs_style_1').on('mouseenter', function () {
+    // Manejar la entrada y salida del cursor sobre los elementos de la galería
+    $('.gallery_item>a, .gallery_award').on('mouseenter', function () {
         $('.cs_cursor_lg').addClass('opacity-0');
         $('.cs_cursor_sm').addClass('opacity-0');
     });
-    $('.cs_portfolio.cs_style_1>a, .cs_awaard.cs_style_1').on('mouseleave', function () {
+    $('.gallery_item>a, .gallery_award').on('mouseleave', function () {
         $('.cs_cursor_lg').removeClass('opacity-0');
         $('.cs_cursor_sm').removeClass('opacity-0');
     });
@@ -35,7 +35,7 @@ function cursorMovingAnimation(event) {
 
         const target = event.target;
         var client_cursor = document.getElementById('client_cursor');
-        if (target.closest('.cs_portfolio.cs_style_1 .cs_portfolio_thumb')) {
+        if (target.closest('.gallery_item .gallery_thumb')) {
             gsap.to(client_cursor, { opacity: 1, zoom: 1, ease: 'power2.out' });
         } else {
             gsap.to(client_cursor, { opacity: 0, ease: 'power2.out' });
@@ -44,12 +44,22 @@ function cursorMovingAnimation(event) {
         console.log(err);
     }
 }
+
 function toggleLike(element) {
     const img = element.querySelector('img');
     if (img.src.includes('corazonFalse.png')) {
         img.src = 'assets/cursor/corazonTrue.png';
     } else {
         img.src = 'assets/cursor/corazonFalse.png';
+    }
+}
+
+function toggleCarrito(element) {
+    const img = element.querySelector('img');
+    if (img.src.includes('carritoVacio.png')) {
+        img.src = 'assets/cursor/carritoLleno.png';
+    } else {
+        img.src = 'assets/cursor/carritoVacio.png';
     }
 }
 // Agregar el evento de movimiento del mouse
