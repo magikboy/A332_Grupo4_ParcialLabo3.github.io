@@ -530,26 +530,31 @@ body.modal-open {
 
 .merch-section .img-center1 {
     transition: transform 0.3s;
-    padding-top: 120px;
-    padding-left: 10px;
+    margin-left: 50px;
+    padding-top: 80px;
+    width: 450px;
 }
 
 .merch-section .img-center2 {
     transition: transform 0.3s;
-    margin: 200px -50px;
-    padding-top: 180px;
+    padding-top: 450px;
+    width: 650px;
 }
 
 .merch-section .img-center3 {
-    position: absolute;
-    top: 23%;
-    left: 60%;
-    transform: rotate(25deg) translate(-50%, 10%);
-    height: 130px; /* Mantén la proporción */
-}
+      position: absolute;
+      width: 250px;
+      top: 28%;
+      left: 60%; 
+      transform: rotate(35deg) translate(-50%, 10%);
+      height: 130px;
+      animation: scaleAndRotate 2s infinite;
+  }
 
 .merch-section .img-center4 {
     display: none;
+    padding-left: 50px;
+    border: 1px solid ;
 }
 
 .bg-color1, .bg-color4 {
