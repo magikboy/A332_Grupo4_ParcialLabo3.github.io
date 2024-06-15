@@ -4,7 +4,6 @@
 /* 1. General Reset y estilos del Body */
 /* 2. Font Face */
 /* 3. Estilos del Contenedor */
-/* 4. Estilos del Modal */
 /* 5. Estilos de la Barra de Navegación */
 /* 6. Estilos del Logo */
 /* 7. Checkbox para el Menú */
@@ -22,9 +21,6 @@
 /* 19. Estilos de la Sección de Contacto */
 /* 20. Carousel de Imágenes */
 /* 21. Estilos del Footer */
-/* 22. Botones de Like */
-/* 23. Botones de Carrito */
-/* 24. Cursores Personalizados */
 
 
 /* 1. General Reset y estilos del Body */
@@ -51,21 +47,6 @@ body {
     max-width: 100%;
 }
 
-/* 4. Estilos del Modal */
-body.modal-open {
-    overflow: hidden;
-    position: fixed;
-    width: 100%;
-}
-
-.modal-dialog {
-    max-width: 100%;
-    margin: auto;
-}
-
-.modal-content {
-    overflow-x: hidden;
-}
 
 /* 5. Estilos de la Barra de Navegación */
 .navbar {
@@ -985,6 +966,87 @@ footer {
     }
 }
 
+/* 19. Estilos de la Sección de Sobre Nosotros */
+.nosotros {
+    background-color: #1E1C1C;
+}
+
+.nosotros-container {
+    display: flex;
+    height: 100%;
+}
+
+
+.nosotros-texto {
+    width: 50%;
+}
+
+.nosotros-info {
+    width: 50%;
+    background-color: #1E1C1C;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nosotros-info h2 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.nosotros-info p {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.nosotros-info label {
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.nosotros-info form {
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+    width: 100%;
+    margin: 0;
+}
+
+.nosotros-info input[type="text"],
+.nosotros-info input[type="email"],
+.nosotros-info textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.nosotros-info input[type="text"]::placeholder,
+.nosotros-info input[type="email"]::placeholder,
+.nosotros-info textarea::placeholder {
+    color: #666;
+}
+
+.nosotros-info button {
+    font-size: 18px;
+    padding: 10px 20px;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nosotros-info button:hover {
+    background-color: #ffffff;
+    transform: scale(1.01);
+}
+
 /* Media Queries para 320px */
 @media (max-width: 320px) {
     .navbar {
@@ -1289,110 +1351,3 @@ footer {
     }
 }
 
-/* Vinilos y CD's */
-
-/* 22. Botones de Like */
-.like-btn {
-    position: absolute;
-    right: 15%;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.like-btn img {
-    width: 100px;
-    height: 100px;
-    filter: drop-shadow(0 4px 8px rgba(247, 0, 0, 0.5)); /* Agrega sombra alrededor de la silueta */
-}
-
-.like-btn[data-top="5px"] {
-    top: 5px;
-}
-
-.like-btn[data-top="420px"] {
-    top: 420px;
-}
-
-.like-btn[data-top="850px"] {
-    top: 850px;
-}
-
-.like-btn[data-top="1275px"] {
-    top: 1275px;
-}
-
-/* 23. Botones de Carrito */
-.Carrito-Btn {
-    position: absolute;
-    right: calc(15% + 380px);
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.Carrito-Btn img {
-    width: 120px;
-    height: 120px;
-    filter: drop-shadow(0 4px 8px rgba(255, 247, 247, 0.5)); /* Agrega sombra alrededor de la silueta */
-}
-
-.Carrito-Btn[data-top="5px"] {
-    top: -5px;
-}
-
-.Carrito-Btn[data-top="420px"] {
-    top: 410px;
-}
-
-.Carrito-Btn[data-top="850px"] {
-    top: 840px;
-}
-
-.Carrito-Btn[data-top="1275px"] {
-    top: 1265px;
-}
-
-/* 24. Cursores Personalizados */
-.cs_cursor_lg,
-.cs_cursor_sm {
-  position: fixed;
-  border-radius: 50%;
-  mix-blend-mode: difference;
-  z-index: 9999;
-}
-
-@media (max-width: 991px) {
-  .cs_cursor_lg,
-  .cs_cursor_sm {
-    display: none !important;
-  }
-}
-
-.cs_cursor_lg {
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  left: 0;
-  top: 0;
-  pointer-events: none;
-  transition: 0.15s;
-}
-.cs_cursor_lg.cs_large {
-  width: 60px;
-  height: 60px;
-  opacity: 0.15;
-}
-
-.cs_cursor_sm {
-  width: 8px;
-  height: 8px;
-  background-color: #fd6219;
-  left: 0;
-  top: 0;
-  pointer-events: none;
-  transition: 0.2s;
-  opacity: 0;
-}
