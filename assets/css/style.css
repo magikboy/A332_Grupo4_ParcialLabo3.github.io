@@ -411,6 +411,66 @@ body {
     }
 }
 
+/* 14. Estilos de la Sección de Nosotros */
+.nosotros-heading-container {
+    display: flex;
+    justify-content: center;
+    background-color: #1E1C1C;
+    padding: 20px 0;
+}
+
+.nosotros-heading {
+    font-size: 3rem;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+}
+
+.nosotros-container {
+    display: flex;
+    height: 100%;
+    background-color: #1E1C1C;
+    align-items: center;
+}
+
+.nosotros-image {
+    width: 50%;
+}
+
+.nosotros-image img {
+    width: 100%;
+    height: auto;
+    border: 0;
+}
+
+.nosotros-info {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.nosotros-info h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.nosotros-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nosotros-info ul li {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+
+
 /* 14. Estilos de la Galería */
 .gallery {
     background-color: #1E1C1C;
