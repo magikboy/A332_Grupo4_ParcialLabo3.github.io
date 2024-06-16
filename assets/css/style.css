@@ -21,6 +21,7 @@
 /* 19. Estilos de la Sección de Contacto */
 /* 20. Carousel de Imágenes */
 /* 21. Estilos del Footer */
+/*22. Estilos Register*/
 
 
 /* 1. General Reset y estilos del Body */
@@ -903,7 +904,12 @@ body {
     filter: brightness(90%);
 }
 
-/* 21. Estilos del Footer */
+/*21 Estilos Register */
+.input-radius{
+    border-radius:30px !important;
+}
+
+/* 22. Estilos del Footer */
 footer {
     background-color: #333;
     color: white;
