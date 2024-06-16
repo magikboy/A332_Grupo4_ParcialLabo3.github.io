@@ -411,7 +411,142 @@ body {
     }
 }
 
-/* 14. Estilos de la Galería */
+/* 14. Estilos de la Sección de Nosotros */
+.nosotros-heading-container {
+    display: flex;
+    justify-content: center;
+    background-color: #1E1C1C;
+    padding: 20px 0;
+}
+
+.nosotros-heading {
+    font-size: 3rem;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+}
+
+.nosotros-container {
+    display: flex;
+    height: 100%;
+    background-color: #1E1C1C;
+    align-items: center;
+}
+
+.nosotros-image {
+    width: 50%;
+}
+
+.nosotros-image img {
+    width: 100%;
+    height: auto;
+    border: 0;
+}
+
+.nosotros-info {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.nosotros-info h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.nosotros-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nosotros-info ul li {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+/* Media Queries para 320px */
+@media (max-width: 320px) {
+    .nosotros-heading {
+        font-size: 32px;
+    }
+    .nosotros-container {
+        flex-direction: column;
+    }
+    .nosotros-image, .nosotros-info {
+        width: 100%;
+    }
+    .nosotros-info h2 {
+        font-size: 32px;
+    }
+    .nosotros-info ul li {
+        font-size: 20px;
+    }
+}
+
+/* Media Queries para 425px */
+@media (max-width: 425px) {
+    .nosotros-heading {
+        font-size: 2rem;
+    }
+    .nosotros-container {
+        flex-direction: column;
+    }
+    .nosotros-image, .nosotros-info {
+        width: 100%;
+    }
+    .nosotros-info h2 {
+        font-size: 1.8rem;
+    }
+    .nosotros-info ul li {
+        font-size: 1.1rem;
+    }
+}
+
+/* Media Queries para 768px */
+@media (max-width: 768px) {
+    .nosotros-heading {
+        font-size: 2.5rem;
+    }
+    .nosotros-container {
+        flex-direction: column;
+    }
+    .nosotros-image, .nosotros-info {
+        width: 100%;
+    }
+    .nosotros-info h2 {
+        font-size: 2rem;
+    }
+    .nosotros-info ul li {
+        font-size: 1.2rem;
+    }
+}
+
+/* Media Queries para 1024px */
+@media (max-width: 1024px) {
+    .nosotros-heading {
+        font-size: 3rem;
+    }
+    .nosotros-container {
+        flex-direction: column;
+    }
+    .nosotros-image, .nosotros-info {
+        width: 100%;
+    }
+    .nosotros-info h2 {
+        font-size: 2.2rem;
+    }
+    .nosotros-info ul li {
+        font-size: 1.3rem;
+    }
+}
+
+
+/* 15. Estilos de la Galería */
 .gallery {
     background-color: #1E1C1C;
     color: #fff;
@@ -964,87 +1099,6 @@ footer {
     .products .product-item {
         width: 100%;
     }
-}
-
-/* 19. Estilos de la Sección de Sobre Nosotros */
-.nosotros {
-    background-color: #1E1C1C;
-}
-
-.nosotros-container {
-    display: flex;
-    height: 100%;
-}
-
-
-.nosotros-texto {
-    width: 50%;
-}
-
-.nosotros-info {
-    width: 50%;
-    background-color: #1E1C1C;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.nosotros-info h2 {
-    color: #ffffff;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.nosotros-info p {
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-
-.nosotros-info label {
-    color: #ffffff;
-    margin-bottom: 5px;
-}
-
-.nosotros-info form {
-    background-color: transparent;
-    padding: 0;
-    box-shadow: none;
-    width: 100%;
-    margin: 0;
-}
-
-.nosotros-info input[type="text"],
-.nosotros-info input[type="email"],
-.nosotros-info textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-.nosotros-info input[type="text"]::placeholder,
-.nosotros-info input[type="email"]::placeholder,
-.nosotros-info textarea::placeholder {
-    color: #666;
-}
-
-.nosotros-info button {
-    font-size: 18px;
-    padding: 10px 20px;
-    color: #000000;
-    background-color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.nosotros-info button:hover {
-    background-color: #ffffff;
-    transform: scale(1.01);
 }
 
 /* Media Queries para 320px */
