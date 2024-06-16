@@ -472,7 +472,7 @@ body {
 /* Media Queries para 320px */
 @media (max-width: 320px) {
     .nosotros-heading {
-        font-size: 1.5rem;
+        font-size: 32px;
     }
     .nosotros-container {
         flex-direction: column;
@@ -481,10 +481,10 @@ body {
         width: 100%;
     }
     .nosotros-info h2 {
-        font-size: 1.5rem;
+        font-size: 32px;
     }
     .nosotros-info ul li {
-        font-size: 1rem;
+        font-size: 20px;
     }
 }
 
