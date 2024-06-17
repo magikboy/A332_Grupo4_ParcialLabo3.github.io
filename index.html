@@ -28,7 +28,9 @@
     <link rel="stylesheet" href="assets/css/flexslider.css" type="text/css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">   
+    <!-- Animaciones Libreria -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> 
 
 </head>
 
@@ -43,14 +45,19 @@
                     <span class="line line3"></span>
                 </div>
                 <div class="logo">
-                    <img src="assets/img/favicon/android-chrome-512x512.png" alt="Logo">
-                    <a href="index.html"><h3>Vinyl Vault</h3></a>
+                    <span class="font-weight-bold" style="font-size: 20px;">
+                        <a href="index.html">
+                            <img src="assets/img/favicon/android-chrome-512x512.png" alt="Logo">                            
+                        </a>
+                        Vinyl Vault
+                    </span>
                 </div>
                 <div class="menu-items">
-                    <li><a href="#nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
                     <li><a href="#vinilos">Vinilos</a></li>
-                    <li><a href="#Merch">Merch</a></li>
-                    <li><a href="#cd">CD's</a></li>
+                    <li><a href="#merch-section">Merch</a></li>
+                    <li><a href="#cd">Cd's</a></li>
+                    <li><a href="register.html">Registrarse</a></li>                    
                     <li><a href="#contacto">Contacto</a></li>
                 </div>
                 <div class="user-icon">
@@ -77,11 +84,11 @@
                     <img src="assets/img/3.png" class="d-block w-100" alt="">
                 </div>
             </div>
-            <div class="carousel-fixed-text">
-                <h1>Vinyl Vault</h1>
-                <h3>Una experiencia musical única</h3>
-                <p>Eleva tu Experiencia Musical.</p>
-                <a href="#nosotros" class="btn">
+            <div class="carousel-fixed-text ">
+                <h1 class="animate__animated animate__fadeInUp animate__slow">Vinyl Vault</h1>
+                <h3 class="animate__animated animate__fadeInUp animate__slow">Una experiencia musical única</h3>
+                <p class="animate__animated animate__fadeInUp animate__slow">Eleva tu Experiencia Musical.</p>
+                <a href="#nosotros" class="btn animate__animated animate__fadeInUp animate__slow">
                     Conócenos
                     <img src="assets/cursor/2.png" alt="Icono" class="btn-icon">
                 </a>
@@ -116,8 +123,8 @@
                 </div>
             </div>
         </section>
-        
-        
+
+
         <section class="gallery" id="vinilos">
             <!-- Galeria vinilos -->
             <div class="container-fluid">
@@ -127,7 +134,7 @@
                     </div>
                 </div>
                 <div class="row vinilos-fotos">
-                    <div class="col-12 col-md-3 animate-box" data-animate-effect="fadeInUp">
+                    <div class="col-12 col-sm-6 col-xl-3 animate-box container-scroll" data-animate-effect="fadeInUp">
                         <a class="d-block foto-item" data-fancybox="images"
                             data-caption="<strong>Album:</strong> In Rainbows<br><strong>Artist:</strong> Radiohead<br><strong>Year:</strong> 2007<br><strong>Genre:</strong> Art-Rock<br><a href='https://open.spotify.com/intl-es/album/5vkqYmiPBYLaalcmjujWxK?si=3vsfl2rSTniyQqcxGoAc2A' target='_blank'>Escuchar</a>"
                             href="assets/img/vinilos/radiohead-in-rainbows.jpg">
@@ -156,7 +163,7 @@
                         
                     </div>
         
-                    <div class="col-12 col-md-3 animate-box" data-animate-effect="fadeInUp">
+                    <div class="col-12 col-sm-6 col-xl-3 animate-box container-scroll" data-animate-effect="fadeInUp">
                         <a class="d-block foto-item" data-fancybox="images"
                             data-caption="<strong>Album:</strong> Almendra<br><strong>Artist:</strong> Almendra<br><strong>Year:</strong> 1969<br><strong>Genre:</strong> Psychedelic Rock<br><a href='https://open.spotify.com/intl-es/album/23jZzJ9u5M9p03nf84zuO1?si=6749527a71f845cc' target='_blank'>Escuchar</a>"
                             href="assets/img/vinilos/almendra.png">
@@ -186,7 +193,7 @@
                         
                     </div>
         
-                    <div class="col-12 col-md-3 animate-box" data-animate-effect="fadeInUp">
+                    <div class="col-12 col-sm-6 col-xl-3 animate-box container-scroll" data-animate-effect="fadeInUp">
                         <a class="d-block foto-item" data-fancybox="images"
                             data-caption="<strong>Album:</strong> Cavalcade<br><strong>Artist:</strong> Black Midi<br><strong>Year:</strong> 2021<br><strong>Genre:</strong> Avant-Prog<br><a href='https://open.spotify.com/intl-es/album/7AsC27VDa3yOksZrfBSD6D?si=da2016d61ba5447d' target='_blank'>Escuchar</a>"
                             href="assets/img/vinilos/a3253300793_65.jpg">
@@ -219,7 +226,7 @@
                         
                     </div>
         
-                    <div class="col-12 col-md-3 animate-box" data-animate-effect="fadeInUp">
+                    <div class="col-12 col-sm-6 col-xl-3 animate-box container-scroll" data-animate-effect="fadeInUp">
                         <a class="d-block foto-item" data-fancybox="images"
                             data-caption="<strong>Album:</strong> The Freewheelin' Bob Dylan <br><strong>Artist:</strong> Bob Dylan<br><strong>Year:</strong> 1963<br><strong>Genre:</strong> Folk Contemporáneo<br><a href='https://open.spotify.com/intl-es/album/0o1uFxZ1VTviqvNaYkTJek?si=f9d6a20145154e9a' target='_blank'>Escuchar</a>"
                             href="assets/img/vinilos/bob-dylan-the-freewheelin-bob-dylan-Cover-Art.jpg">
@@ -283,7 +290,7 @@
             </div>
         </section>
 
-        <section class="merch-section" id="Merch">
+        <section class="merch-section" id="merch-section">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12 text-center">
@@ -291,9 +298,9 @@
                     </div>
                 </div>
                 <div class="row remera">
-                    <div class="col-md-3 bg-color1">
-                        <img class="img-fluid" src="assets/img/merch/1.png">
-                        <img class="img-fluid" src="assets/img/merch/2.png">
+                    <div class="col-md-3 bg-color1 container-remeras">
+                        <img class="img-fluid animate__animated animate__infinite animate__slower animate__fadeInUp " src="assets/img/merch/1.png">
+                        <img class="img-fluid animate__animated animate__infinite animate__slower animate__fadeInUp " src="assets/img/merch/2.png">
                     </div>
                     <div class="col-md-3 bg-color2 merch-center1">
                         <div class="col-md-3">
@@ -301,15 +308,16 @@
                         </div>
                     </div>
                     <div class="col-md-3 bg-color2 merch-center2">
-                        <div class="col-md-3">
+                        <div class="col-md-3 container-img-center-merch">
                             <img class="img-center3" src="assets/cursor/flecha1.png">
                             <img class="img-center4" src="assets/cursor/flecha.png">
                             <img class="img-center2" src="assets/img/merch/6.png">
                         </div>
                     </div>
-                    <div class="col-md-3 bg-color4">
-                        <img class="img-fluid" src="assets/img/merch/3.png">
-                        <img class="img-fluid" src="assets/img/merch/4.png">
+                    <div class="col-md-3 bg-color4 container-remeras">
+                        <img class="img-fluid animate__animated animate__infinite animate__slower animate__fadeInDown" src="assets/img/merch/3.png">
+                        <img class="img-fluid  animate__animated animate__infinite animate__slower animate__fadeInDown" src="assets/img/merch/4.png">
+                        <!-- -->
                     </div>
                 </div>
                 <div class="row mt-4">
@@ -329,7 +337,7 @@
                     </div>
                 </div>
                 <div class="row cd-fotos">
-                    <div class="col-12 col-md-3 animate-box" data-animate-effect="fadeInUp">
+                    <div class="col-12 col-sm-6  col-xl-3 animate-box container-scroll" data-animate-effect="fadeInUp">
                         <a class="d-block foto-item" data-fancybox="images"
                             data-caption="<strong>Album:</strong> Valentin Alsina<br><strong>Artist:</strong> 2 Minutos<br><strong>Year:</strong> 1994<br><strong>Genre:</strong> Punk<br><a href='https://open.spotify.com/intl-es/album/3LgREqKxbuGFLthZqShNuC?si=ubvqFX43TRmpxV-6ZuFnaQ' target='_blank'>Escuchar</a>"
                             href="assets/img/vinilos/2-minutos-valentin-alsina-Cover-Art.jpg">
@@ -359,7 +367,7 @@
                         </a>
                         
                     </div>
-                    <div class="col-12 col-md-3 animate-box" data-animate-effect="fadeInUp">
+                    <div class="col-12 col-sm-6  col-xl-3 animate-box container-scroll" data-animate-effect="fadeInUp">
                         <a class="d-block foto-item" data-fancybox="images"
                             data-caption="<strong>Album:</strong> Romance<br><strong>Artist:</strong> Luis Miguel<br><strong>Year:</strong> 1991<br><strong>Genre:</strong> Bolero, Latin Pop<br><a href='https://open.spotify.com/intl-es/album/4MjzdTkEmTwPAlVwDSSivP ' target='_blank'>Escuchar</a>"
                             href="assets/img/vinilos/luis-miguel-romance-Cover-Art.jpg">
@@ -390,7 +398,7 @@
                         </a>
                         
                     </div>
-                    <div class="col-12 col-md-3 animate-box" data-animate-effect="fadeInUp">
+                    <div class="col-12 col-sm-6  col-xl-3 animate-box container-scroll" data-animate-effect="fadeInUp">
                         <a class="d-block foto-item" data-fancybox="images"
                             data-caption="<strong>Album:</strong> Hellfire<br><strong>Artist:</strong> Black Midi<br><strong>Year:</strong> 2022<br><strong>Genre:</strong> Avant-Prog<br><a href='https://open.spotify.com/intl-es/album/68z6MWYYNmvTcru1QMcYId?si=08493b6965d446d3' target='_blank'>Escuchar</a>"
                             href="assets/img/vinilos/black-midi-hellfire-Cover-Art.jpg">
@@ -420,7 +428,7 @@
                         </a>
                         
                     </div>
-                    <div class="col-12 col-md-3 animate-box" data-animate-effect="fadeInUp">
+                    <div class="col-12 col-sm-6  col-xl-3 animate-box container-scroll" data-animate-effect="fadeInUp">
                         <a class="d-block foto-item" data-fancybox="images"
                             data-caption="<strong>Album:</strong> Grace<br><strong>Artist:</strong> Jeff Buckley<br><strong>Year:</strong> 1994<br><strong>Genre:</strong> Rock Alternativo<br><a href='https://open.spotify.com/intl-es/album/7yQtjAjhtNi76KRu05XWFS' target='_blank'>Escuchar</a>"
                             href="assets/img/vinilos/jeff-buckley-grace-Cover-Art.jpg">
@@ -488,17 +496,16 @@
             </div>
 
         </section>
-
-
+    
         <section class="contact" id="contacto">
-            <div class="contact-container">
-                <div class="contact-image">
+            <div class="contact-container d-block d-lg-flex">
+                <div class="contact-image col-12 col-lg-6 p-0 ">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8351.650391025763!2d-0.07440029921630568!3d51.51394035851203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1717445322748!5m2!1ses-419!2sar"
-                        width="940" height="610" style="border:0;" allowfullscreen="" loading="lazy"
+                        width="940" height="610" style="border:0; padding:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <div class="contact-info">
+                <div class="contact-info col-12 col-lg-6">
                     <h2>Contácto</h2>
                     <p>Déjanos tu consulta y nuestro personal se pondrá en contacto a la brevedad:</p>
                     <form>
@@ -515,8 +522,8 @@
             </div>
         </section>
 
-        <footer>
-            <div class="footer-container">
+        <footer >
+            <div class="footer-container d-block d-md-flex ">
                 <div class="footer-section logo-section">
                     <img src="assets/img/favicon/android-chrome-512x512.png" alt="Vinyl Vault">
                     <h4>Vinyl Vault</h4>
@@ -524,10 +531,11 @@
                 <div class="footer-section">
                     <h4>MENU</h4>
                     <ul>
-                        <li><a href="#vinilos">Vinilos</a></li>
-                        <li><a href="#cd">CD'S</a></li>
-                        <li><a href="#merch">MERCH</a></li>
-                        <li><a href="#contacto">CONTACTO</a></li>
+                    <li><a href="#vinilos">VINILOS</a></li>
+                    <li><a href="#merch-section">MERCH</a></li>
+                    <li><a href="#cd">CD'S</a></li>
+                    <li><a href="/register.html">REGISTRARSE</a></li>                    
+                    <li><a href="#contacto">CONTACTO</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
