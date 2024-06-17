@@ -528,31 +528,31 @@ body {
 
 .merch-section .img-center1 {
     transition: transform 0.3s;
-    margin-left: 50px;
+    /* margin-left: 50px; */
     padding-top: 80px;
-    width: 450px;
+    width: 20vw;
 }
 
 .merch-section .img-center2 {
     transition: transform 0.3s;
-    padding-top: 450px;
-    width: 650px;
+    padding-top: 40vh;
+    /* width: 650px; */
+    width: 25vw    
 }
 
 .merch-section .img-center3 {
       position: absolute;
-      width: 250px;
+      width: 12vw;
       top: 28%;
       left: 60%; 
       transform: rotate(35deg) translate(-50%, 10%);
-      height: 130px;
+      height: 15vh;
       animation: scaleAndRotate 2s infinite;
   }
 
 .merch-section .img-center4 {
     display: none;
-    padding-left: 50px;
-    border: 1px solid ;
+    padding-left: 50px;    
 }
 
 .bg-color1, .bg-color4 {
@@ -581,6 +581,14 @@ body {
 .merch-section .btn:hover {
     background-color: black;
     transform: scale(1.01);
+}
+
+.container-remeras{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
 }
 
 /* 17. Estilos de la Galería de Remeras */
@@ -714,6 +722,13 @@ body {
     }
 }
 
+    .container-img-center-merch{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+    }
 @media (max-width: 425px) {
     .gallery_Remeras .row {
         display: flex;
@@ -738,8 +753,8 @@ body {
 
     .merch-section .img-center4 {
         position: absolute;
-        top: 10%;
-        left: -200%;
+        /* top: 10%;
+        left: -200%; */
         display: block;
         height: 130px; /* Mantén la proporción */
     }
@@ -764,10 +779,16 @@ body {
         font-size: 24px; /* Ajusta el tamaño de fuente */
     }
 
+    .merch-section .img-center1 {
+        margin-left: 0;
+        padding-left: 0;
+        width:75vw;
+    }
+
     .merch-section .img-center4 {
-        position: absolute;
-        top: 10%;
-        left: 60%;
+        position: relative;
+        /* top: 10%;
+        left: 60%; */
         display: block;
         transform: rotate(180deg);
         height: 130px; /* Mantén la proporción */
@@ -775,6 +796,15 @@ body {
 
     .merch-section .img-center3 {
         display: none;
+    }
+
+    .merch-section .img-center2 {
+        width: 75vw;
+        padding: 0;
+    }
+
+    .container-img-center-merch{
+        align-items: center;
     }
 }
 
@@ -792,19 +822,9 @@ body {
     .gallery_Remeras h2 {
         font-size: 28px; /* Ajusta el tamaño de fuente para pantallas más pequeñas */
     }
-
-    .merch-section .img-center4 {
-        position: absolute;
-        top: 10%;
-        left: 60%;
-        display: block;
-        transform: rotate(180deg);
-        height: 130px; /* Mantén la proporción */
-    }
-
-    .merch-section .img-center3 {
+    /* .merch-section .img-center3 {
         display: none;
-    }
+    } */
 }
 
 /* 19. Estilos de la Sección de Contacto */
