@@ -1551,3 +1551,45 @@ hr{
     color: white;
 
 }
+
+/* 24. Cursores Personalizados */
+.cs_cursor_lg,
+.cs_cursor_sm {
+  position: fixed;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  z-index: 9999;
+}
+
+@media (max-width: 991px) {
+  .cs_cursor_lg,
+  .cs_cursor_sm {
+    display: none !important;
+  }
+}
+
+.cs_cursor_lg {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transition: 0.15s;
+}
+.cs_cursor_lg.cs_large {
+  width: 60px;
+  height: 60px;
+  opacity: 0.15;
+}
+
+.cs_cursor_sm {
+  width: 8px;
+  height: 8px;
+  background-color: #fd6219;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transition: 0.2s;
+  opacity: 0;
+}
