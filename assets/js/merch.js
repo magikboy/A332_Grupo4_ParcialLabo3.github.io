@@ -1,5 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
   generarCards(productosJson);
+
+  const searchInput = document.getElementById("searchInput");
+
+  searchInput.addEventListener("input", () => {
+    const searchTerm = searchInput.value.toLowerCase();
+    const filteredProductos = productosJson.filter((producto) =>
+      producto.nombre.toLowerCase().includes(searchTerm)
+    );
+    generarCards(filteredProductos);
+  });
 });
 
 function generarCards(productos) {
