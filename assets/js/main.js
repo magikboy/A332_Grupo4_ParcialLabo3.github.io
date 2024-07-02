@@ -48,3 +48,5 @@ function cursorMovingAnimation(event) {
 // Agregar el evento de movimiento del mouse
 document.addEventListener('mousemove', cursorMovingAnimation);
 
+
+
