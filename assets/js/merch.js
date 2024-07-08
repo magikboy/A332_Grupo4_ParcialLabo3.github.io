@@ -38,7 +38,7 @@ let productosJson = [
   {
     nombre: "The Beatles",
     precio: 20000,
-    imagen: "assets/img/merch/1.png",
+    imagen: "assets/img/merch/2.png",
   },
   {
     nombre: "Queen",
@@ -48,17 +48,17 @@ let productosJson = [
   {
     nombre: "Pink Floyd",
     precio: 18000,
-    imagen: "assets/img/merch/1.png",
+    imagen: "assets/img/merch/3.png",
   },
   {
     nombre: "The Rolling Stones",
     precio: 22000,
-    imagen: "assets/img/merch/1.png",
+    imagen: "assets/img/merch/4.png",
   },
   {
     nombre: "Soda Stereo",
     precio: 19000,
-    imagen: "assets/img/merch/1.png",
+    imagen: "assets/img/merch/3.png",
   },
   {
     nombre: "Los Fabulosos Cadillacs",
@@ -68,11 +68,11 @@ let productosJson = [
   {
     nombre: "AC/DC",
     precio: 25000,
-    imagen: "assets/img/merch/1.png",
+    imagen: "assets/img/merch/3.png",
   },
   {
     nombre: "Guns N' Roses",
     precio: 21000,
-    imagen: "assets/img/merch/1.png",
+    imagen: "assets/img/merch/10.png",
   },
 ];

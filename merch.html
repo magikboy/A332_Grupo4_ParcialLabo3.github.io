@@ -36,25 +36,17 @@
     <nav>
         <div class="navbar">
             <div class="container nav-container">
-                <input class="checkbox" type="checkbox" name="" id="">
-                <div class="hamburger-lines">
-                    <span class="line line1"></span>
-                    <span class="line line2"></span>
-                    <span class="line line3"></span>
-                </div>
+                <input class="checkbox" type="checkbox" id="menu-checkbox">
                 <div class="logo">
-                    <img src="assets/img/favicon/android-chrome-512x512.png" alt="Logo">
-                    <h3>Vinyl Vault</h3>
-                </div>
-                <div class="menu-items">
-                    <li><a href="#">Vinilos</a></li>
-                    <li><a href="#">Merch</a></li>
-                    <li><a href="#">Cd's</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <span class="font-weight-bold" style="font-size: 20px;">
+                        <a href="index.html">
+                            <img src="assets/img/favicon/android-chrome-512x512.png" alt="Logo">
+                        </a>
+                        Vinyl Vault
+                    </span>
                 </div>
                 <div class="user-icon">
-                    <a href="#" data-toggle="modal" data-target="#modal-login"><img src="assets/img/user/usericon.png"
-                            alt="User Icon"></a>
+                    <a href="login.html"><img src="assets/img/user/usericon.png" alt="User Icon"></a>
                 </div>
             </div>
         </div>
@@ -119,87 +111,6 @@
             <p>Derechos reservados Vinyl Vault &copy; 2024</p>
         </div>
     </footer>
-
-            <!-- Modal de Login -->
-            <div class="modal fade" id="modal-login">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content text-center" style="background-color: #333; color: #fff;">
-                        <!-- Encabezado del modal -->
-                        <div class="modal-header border-bottom-0">
-                            <h4 class="modal-title w-100" style="font-size: 18px;">Logearse</h4>
-                            <button type="button" class="close" data-dismiss="modal"
-                                style="background: none; border: none; color: #fff; font-size: 20px;">&times;</button>
-                        </div>
-    
-                        <!-- Cuerpo del modal -->
-                        <div class="modal-body">
-                            <!-- Formulario de Login -->
-                            <form id="logear" action="" method="POST">
-                                <input type="hidden" name="formulario" value="logear">
-    
-                                <div class="form-group">
-                                    <input type="text" name="Usuario" class="form-control input-lg" placeholder="Usuario"
-                                        required>
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" name="Contraseña" class="form-control input-lg"
-                                        placeholder="Contraseña" required>
-                                </div>
-    
-                                <!-- Botón de enviar -->
-                                <button type="submit" class="btn btn-primary btn-block"
-                                    style="background-color: #ffffff; color: #000000; border: 3px solid black; border-radius: 25px;">Entrar</button>
-                            </form>
-                        </div>
-    
-                        <!-- Pie del modal (botones de Enviar y Cerrar) -->
-                        <div class="modal-footer" style="justify-content: center; border: none;">
-                            <b>¿No tenes cuenta? <a href="#" data-toggle="modal" data-target="#modal-registrar"
-                                    style="color: #0779e4;">Registrate</a></b>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    
-            <!-- Modal de Registrar -->
-            <div class="modal fade" id="modal-registrar">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content text-center" style="background-color: #333; color: #fff;">
-                        <!-- Encabezado del modal -->
-                        <div class="modal-header border-bottom-0">
-                            <h4 class="modal-title w-100" style="font-size: 18px;">Registrarse</h4>
-                            <button type="button" class="close" data-dismiss="modal"
-                                style="background: none; border: none; color: #fff; font-size: 20px;">&times;</button>
-                        </div>
-    
-                        <!-- Cuerpo del modal -->
-                        <div class="modal-body">
-                            <!-- Formulario de Registrar -->
-                            <form id="registrarse" action="" method="POST">
-                                <input type="hidden" name="formulario" value="registrarse">
-    
-                                <div class="form-group">
-                                    <input type="text" name="Usuario" class="form-control input-lg" placeholder="Usuario"
-                                        required>
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" name="Contraseña" class="form-control input-lg"
-                                        placeholder="Contraseña" required>
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" name="Contraseña" class="form-control input-lg"
-                                        placeholder="Confirmar Contraseña" required>
-                                </div>
-                            </form>
-                        </div>
-    
-                        <div class="modal-footer" style="justify-content: center; border: none;">
-                            <button type="submit" class="btn btn-primary btn-block"
-                                style="background-color: #ffffff; color: #000000; border: 3px solid black; border-radius: 25px;">Crear</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
     <!--Scripts -->
     <script src="./assets/js/merch.js"></script>

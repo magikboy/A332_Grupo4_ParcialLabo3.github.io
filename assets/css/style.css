@@ -53,6 +53,162 @@ h1, .navbar .nav-container a {
     box-sizing: border-box;
     max-width: 100%;
 }
+
+.sign {
+    display: inline-block;
+    font-family: "Clip", sans-serif;
+    font-size: 1em; /* Ajusta el tamaño según tus necesidades */
+    color: #ff6666; /* Rojo más claro */
+    text-shadow: 
+      0 0 0.6rem #ff6666, 
+      0 0 1.5rem #ff6666, 
+      -0.2rem 0.1rem 1rem #000000, 
+      0.2rem 0.1rem 1rem #000000, 
+      0 -0.5rem 2rem #000000, 
+      0 0.5rem 3rem #000000;
+    animation: shine 2s forwards, flicker 3s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 22%, 36%, 75% {
+      color: #ff6666;
+      text-shadow: 
+        0 0 0.6rem #ff6666, 
+        0 0 1.5rem #ff6666, 
+        -0.2rem 0.1rem 1rem #000000, 
+        0.2rem 0.1rem 1rem #000000, 
+        0 -0.5rem 2rem #000000, 
+        0 0.5rem 3rem #000000;
+    }
+    28%, 33% {
+      color: #ff6666;
+      text-shadow: none;
+    }
+    82%, 97% {
+      color: #ff6666;
+      text-shadow: none;
+    }
+  }
+  
+  @keyframes shine {
+    0% {
+      color: #6b1839;
+      text-shadow: none;
+    }
+    100% {
+      color: #ff6666;
+      text-shadow: 
+        0 0 0.6rem #ff6666, 
+        0 0 1.5rem #ff6666, 
+        -0.2rem 0.1rem 1rem #000000, 
+        0.2rem 0.1rem 1rem #000000, 
+        0 -0.5rem 2rem #000000, 
+        0 0.5rem 3rem #000000;
+    }
+  }
+  
+  @keyframes flicker {
+    from {
+      opacity: 1;
+    }
+    4% {
+      opacity: 0.9;
+    }
+    6% {
+      opacity: 0.85;
+    }
+    8% {
+      opacity: 0.95;
+    }
+    10% {
+      opacity: 0.9;
+    }
+    11% {
+      opacity: 0.922;
+    }
+    12% {
+      opacity: 0.9;
+    }
+    14% {
+      opacity: 0.95;
+    }
+    16% {
+      opacity: 0.98;
+    }
+    17% {
+      opacity: 0.9;
+    }
+    19% {
+      opacity: 0.93;
+    }
+    20% {
+      opacity: 0.99;
+    }
+    24% {
+      opacity: 1;
+    }
+    26% {
+      opacity: 0.94;
+    }
+    28% {
+      opacity: 0.98;
+    }
+    37% {
+      opacity: 0.93;
+    }
+    38% {
+      opacity: 0.5;
+    }
+    39% {
+      opacity: 0.96;
+    }
+    42% {
+      opacity: 1;
+    }
+    44% {
+      opacity: 0.97;
+    }
+    46% {
+      opacity: 0.94;
+    }
+    56% {
+      opacity: 0.9;
+    }
+    58% {
+      opacity: 0.9;
+    }
+    60% {
+      opacity: 0.99;
+    }
+    68% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 0.9;
+    }
+    72% {
+      opacity: 0.95;
+    }
+    93% {
+      opacity: 0.93;
+    }
+    95% {
+      opacity: 0.95;
+    }
+    97% {
+      opacity: 0.93;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Asegúrate de ajustar el tamaño del texto principal para mantener la coherencia */
+  .header-title {
+    font-size: 4em;
+    text-shadow: 6px 6px 8px #000000;
+  }
+
 .nav-hidden {
     transform: translateY(-100%);
     transition: transform 0.3s ease-in-out;
@@ -1611,6 +1767,3 @@ hr{
   transition: 0.2s;
   opacity: 0;
 }
-
-
-
