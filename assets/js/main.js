@@ -45,7 +45,6 @@ function cursorMovingAnimation(event) {
     }
 }
 
-
 // Desplazamiento suave a las secciones al hacer clic en los enlaces del menú
 $(document).ready(function(){
     $('a[href^="#"]').on('click', function(event) {
@@ -60,8 +59,6 @@ $(document).ready(function(){
         }
     });
 });
-
-
 
 $(document).ready(function() {
     var lastScrollTop = 0;
@@ -82,9 +79,85 @@ $(document).ready(function() {
     });
 });
 
-
 // Agregar el evento de movimiento del mouse
 document.addEventListener('mousemove', cursorMovingAnimation);
 
+// Validaciones del formulario de contacto
+$(document).ready(function() {
+    $('#form').on('submit', function(event) {
+        event.preventDefault(); // Evita el envío del formulario
 
+        // Validación de los campos del formulario
+        let fromName = $('#from_name').val().trim();
+        let message = $('#message').val().trim();
+        let emailId = $('#email_id').val().trim();
+        let valid = true;
+        let alertMessage = '';
 
+        if (fromName === '') {
+            alertMessage += 'Por favor, ingresa tu nombre.<br>';
+            valid = false;
+        }
+
+        if (message === '') {
+            alertMessage += 'Por favor, ingresa tu consulta.<br>';
+            valid = false;
+        }
+
+        if (emailId === '') {
+            alertMessage += 'Por favor, ingresa tu correo electrónico.<br>';
+            valid = false;
+        } else if (!validateEmail(emailId)) {
+            alertMessage += 'Por favor, ingresa un correo electrónico válido.<br>';
+            valid = false;
+        }
+
+        if (!valid) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Validación del Formulario',
+                html: alertMessage,
+                background: '#f8d7da',
+                confirmButtonColor: '#d33',
+                confirmButtonText: 'Ok'
+            });
+            return;
+        }
+
+        // Si el formulario es válido, procede a enviar el email
+        btn.value = 'Enviando...';
+
+        const serviceID = 'default_service';
+        const templateID = 'template_9178r48';
+
+        emailjs.sendForm(serviceID, templateID, this)
+        .then(() => {
+            btn.value = 'Send Email';
+            Swal.fire({
+                html: `
+                <div style="position: relative; padding: 20px; border-radius: 10px; text-align: center; overflow: hidden;">
+                    <img src="assets/img/musicos/1.png" alt="Saxofonista 1" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); width: 70px; height: auto;">
+                    <span style="color: white; margin: 0 10px;">Consulta Enviada!</span>
+                    <img src="assets/img/musicos/2.png" alt="Saxofonista 2" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); width: 70px; height: auto;">
+                </div>
+                `,
+                background: '#333',
+                showConfirmButton: false,
+                timer: 3000
+            });
+        }, (err) => {
+            btn.value = 'Send Email';
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Hubo un problema al enviar tu consulta.',
+                footer: `<pre>${JSON.stringify(err, null, 2)}</pre>`
+            });
+        });
+    });
+});
+
+function validateEmail(email) {
+    const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return re.test(email);
+}
