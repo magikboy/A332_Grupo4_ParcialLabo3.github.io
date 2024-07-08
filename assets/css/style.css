@@ -24,6 +24,9 @@
 /*22. Estilos Register*/
 
 
+/* Importar la fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&display=swap');
+
 /* 1. General Reset y estilos del Body */
 html, body {
     margin: 0;
@@ -31,10 +34,7 @@ html, body {
     width: 100%;
     overflow-x: hidden; /* Oculta el desbordamiento horizontal */
     background-color: #333 !important;
-}
-
-body {
-    font-family: 'TAN-NIMBUS', sans-serif !important;
+    font-family: 'Playwrite AU QLD', sans-serif; /* Aplicar la nueva fuente al resto del contenido */
 }
 
 /* 2. Font Face */
@@ -43,14 +43,22 @@ body {
     src: url('/A332_Grupo4_ParcialLabo3.github.io/assets/fonts/TAN-NIMBUS.ttf') format('truetype');
 }
 
+/* Aplicar la fuente TAN-NIMBUS solo a los elementos h1 y al título del navbar */
+h1, .navbar .nav-container a {
+    font-family: 'TAN-NIMBUS', sans-serif;
+}
+
 /* 3. Estilos del Contenedor */
 .container, .navbar, .nav-container, .menu-items, .header, .gallery, .merch-section, .contact-container, footer {
     box-sizing: border-box;
     max-width: 100%;
 }
+.nav-hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
 
-
-/* 5. Estilos de la Barra de Navegación */
+/* Estilos generales para la navbar */
 .navbar {
     background-color: #1E1C1C;
     width: 100%;
@@ -68,27 +76,16 @@ body {
     z-index: 1100;
 }
 
-.navbar .menu-items {
-    padding-top: 120px;
-    background-color: #1E1C1C;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
+.menu-items {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.5s ease-in-out;
-    text-align: center;
+    gap: 15px;
 }
 
-.navbar .nav-container li {
+.nav-container li {
     list-style: none;
 }
 
-.navbar .nav-container a {
+.nav-container a {
     text-decoration: none;
     color: #ffffff;
     font-weight: 500;
@@ -96,84 +93,10 @@ body {
     padding: 0.7rem;
 }
 
-.navbar .nav-container a:hover {
+.nav-container a:hover {
     font-weight: bolder;
 }
 
-.nav-container {
-    display: block;
-    position: relative;
-    height: 60px;
-}
-
-.nav-container .checkbox {
-    position: absolute;
-    display: block;
-    height: 32px;
-    width: 32px;
-    top: 20px;
-    right: 20px;
-    z-index: 5;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.nav-container .hamburger-lines {
-    display: block;
-    height: 26px;
-    width: 32px;
-    position: absolute;
-    top: 17px;
-    right: 20px;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.nav-container .hamburger-lines .line {
-    display: block;
-    height: 4px;
-    width: 100%;
-    border-radius: 10px;
-    background: #ffffff;
-}
-
-.nav-container .hamburger-lines .line1 {
-    transform-origin: 0% 0%;
-    transition: transform 0.4s ease-in-out;
-}
-
-.nav-container .hamburger-lines .line2 {
-    transition: transform 0.2s ease-in-out;
-}
-
-.nav-container .hamburger-lines .line3 {
-    transform-origin: 0% 100%;
-    transition: transform 0.4s ease-in-out;
-}
-
-.navbar .menu-items {
-    padding-top: 120px;
-    background-color: #1E1C1C;
-    height: 100vh;
-    width: 100%;
-    transform: translate(-150%);
-    display: flex;
-    flex-direction: column;
-    margin-left: -40px;
-    padding-left: 50px;
-    transition: transform 0.5s ease-in-out;
-    text-align: center;
-}
-
-.navbar .menu-items li {
-    margin-bottom: 1.2rem;
-    font-size: 1.5rem;
-    font-weight: 500;
-}
-
-/* 6. Estilos del Logo */
 .logo {
     display: flex;
     align-items: center;
@@ -183,12 +106,6 @@ body {
     margin-top: 10px;
 }
 
-.logo h3 {
-    font-weight: 50;
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-}
-
 .logo img {
     width: 50px;
     height: 50px;
@@ -196,21 +113,101 @@ body {
     margin-right: 10px;
 }
 
-/* 7. Checkbox para el Menú */
-.nav-container input[type="checkbox"]:checked~.menu-items {
-    transform: translateX(0);
+.user-icon {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    margin-right:50px;
 }
 
-.nav-container input[type="checkbox"]:checked~.hamburger-lines .line1 {
-    transform: rotate(45deg);
+.user-icon img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
 }
 
-.nav-container input[type="checkbox"]:checked~.hamburger-lines .line2 {
-    transform: scaleY(0);
+.hamburger-lines {
+    display: none;
 }
 
-.nav-container input[type="checkbox"]:checked~.hamburger-lines .line3 {
-    transform: rotate(-45deg);
+/* Estilos para el checkbox */
+.checkbox {
+    display: none; /* Oculta el checkbox por defecto */
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .hamburger-lines {
+        display: block;
+        height: 26px;
+        width: 32px;
+        position: absolute;
+        top: 17px;
+        right: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .hamburger-lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #ffffff;
+    }
+
+    .checkbox {
+        display: block; /* Muestra el checkbox en pantallas móviles */
+        position: absolute;
+        height: 32px;
+        width: 32px;
+        top: 20px;
+        right: 20px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .menu-items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: #1E1C1C;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in-out;
+        text-align: center;
+    }
+
+    .menu-items li {
+        margin-bottom: 1.2rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .checkbox:checked ~ .menu-items {
+        transform: translateX(0);
+    }
+
+    .checkbox:checked ~ .hamburger-lines .line1 {
+        transform: rotate(45deg);
+    }
+
+    .checkbox:checked ~ .hamburger-lines .line2 {
+        transform: scaleY(0);
+    }
+
+    .checkbox:checked ~ .hamburger-lines .line3 {
+        transform: rotate(-45deg);
+    }
 }
 
 /* 8. Estilos del Icono de Usuario */
@@ -1033,10 +1030,30 @@ body {
 .contact-info textarea::placeholder {
     color: #666;
 }
+.contact-info textarea {
+    width: 100%;
+    height: 150px; /* Ajusta esta altura según tus necesidades */
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical; /* Permite que el usuario ajuste la altura si es necesario */
+}
+
+.contact-info input, .contact-info textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 
 .contact-info button {
-    font-size: 18px;
-    padding: 10px 20px;
+    display: block; /* Asegura que el botón sea un elemento de bloque */
+    width: 15%; /* Ocupa todo el ancho del contenedor */
+    font-size: 16px; /* Ajusta el tamaño de la fuente */
+    padding: 10px 20px; /* Ajusta el relleno para hacer el botón más pequeño */
     color: #000000;
     background-color: #ffffff;
     border: none;
@@ -1048,6 +1065,7 @@ body {
     background-color: #ffffff;
     transform: scale(1.01);
 }
+
 
 /* 20. Carousel de Imágenes */
 #newImageCarousel .carousel-item {
@@ -1593,3 +1611,6 @@ hr{
   transition: 0.2s;
   opacity: 0;
 }
+
+
+

@@ -45,6 +45,44 @@ function cursorMovingAnimation(event) {
     }
 }
 
+
+// Desplazamiento suave a las secciones al hacer clic en los enlaces del menú
+$(document).ready(function(){
+    $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if( target.length ) {
+            event.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top
+            }, 1200);
+            // Desmarca el checkbox para cerrar el menú
+            $('#menu-checkbox').prop('checked', false);
+        }
+    });
+});
+
+
+
+$(document).ready(function() {
+    var lastScrollTop = 0;
+    var navbar = $('.navbar');
+    
+    $(window).scroll(function(event) {
+        var st = $(this).scrollTop();
+        
+        if (st > lastScrollTop) {
+            // Scroll hacia abajo
+            navbar.addClass('nav-hidden');
+        } else {
+            // Scroll hacia arriba
+            navbar.removeClass('nav-hidden');
+        }
+        
+        lastScrollTop = st;
+    });
+});
+
+
 // Agregar el evento de movimiento del mouse
 document.addEventListener('mousemove', cursorMovingAnimation);
 
