@@ -161,3 +161,13 @@ function validateEmail(email) {
     const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     return re.test(email);
 }
+
+document.getElementById('auto-fill').addEventListener('click', async function() {
+    const response = await fetch('data.json');
+    const data = await response.json();
+    
+    document.getElementById('from_name').value = data.from_name;
+    document.getElementById('message').value = data.message;
+    document.getElementById('email_id').value = data.email_id;
+    
+});

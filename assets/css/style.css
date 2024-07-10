@@ -1067,6 +1067,16 @@ h1, .navbar .nav-container a {
     transform: scale(1.01);
 }
 
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.button-group button {
+    flex: 1;
+    padding: 10px 20px;
+}
+
 
 /* 20. Carousel de Imágenes */
 #newImageCarousel .carousel-item {
