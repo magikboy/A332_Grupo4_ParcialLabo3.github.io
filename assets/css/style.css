@@ -44,7 +44,7 @@ html, body {
 }
 
 /* Aplicar la fuente TAN-NIMBUS solo a los elementos h1 y al título del navbar */
-h1, .navbar .nav-container a {
+h1 ,h2{
     font-family: 'TAN-NIMBUS', sans-serif;
 }
 
