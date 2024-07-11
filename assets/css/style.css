@@ -1622,3 +1622,26 @@ hr{
   transition: 0.2s;
   opacity: 0;
 }
+
+/* 25. Letras canciones */
+
+.loader, .error, .artist, .song {
+    display: none; /* Ocultar los elementos por defecto */
+}
+
+.error, .artist, .song {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.song pre {
+    white-space: pre-wrap;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-height: 300px;
+    overflow-y: auto; 
+}

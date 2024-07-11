@@ -554,7 +554,31 @@
             </div>
         </section>
 
-
+        <section class="contact" id="contacto">
+            <div class="contact-container">
+                <div class="contact-container d-block d-lg-flex">
+                    <div class="contact-info col-12">
+                        <h2>Buscador de Canciones</h2>
+                        <p>Introduce el nombre del intérprete y la canción que deseas buscar:</p>
+                        <form id="buscar-musica">
+                            <div class="field">
+                                <input type="text" name="artist" placeholder="Nombre del Intérprete" required>
+                            </div>
+                            <div class="field">
+                                <input type="text" name="song" placeholder="Nombre de la Canción" required>
+                            </div>
+                            <div class="button-group">
+                                <button class="contact-info" type="submit">Buscar</button>
+                            </div>
+                        </form>
+                        <img class="loader" src="https://www.example.com/loader.svg" alt="Cargando...">
+                        <aside class="error"></aside>
+                        <article class="artist"></article>
+                        <article class="song"></article>
+                    </div>
+                </div>
+            </div>
+        </section>
         <footer>
             <div class="footer-container d-block d-md-flex ">
                 <div class="footer-section logo-section">
@@ -593,6 +617,8 @@
                 <p>Derechos reservados Vinyl Vault &copy; 2024</p>
             </div>
         </footer>
+
+
 
     </main>
 

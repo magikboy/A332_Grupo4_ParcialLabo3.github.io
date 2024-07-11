@@ -157,17 +157,62 @@ $(document).ready(function() {
     });
 });
 
-function validateEmail(email) {
-    const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    return re.test(email);
-}
+    function validateEmail(email) {
+        const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        return re.test(email);
+    }
 
-document.getElementById('auto-fill').addEventListener('click', async function() {
-    const response = await fetch('data.json');
-    const data = await response.json();
-    
-    document.getElementById('from_name').value = data.from_name;
-    document.getElementById('message').value = data.message;
-    document.getElementById('email_id').value = data.email_id;
-    
-});
+    document.getElementById('auto-fill').addEventListener('click', async function() 
+    {
+        const response = await fetch('data.json');
+        const data = await response.json();
+        
+        document.getElementById('from_name').value = data.from_name;
+        document.getElementById('message').value = data.message;
+        document.getElementById('email_id').value = data.email_id;
+        
+    });
+
+    document.getElementById('buscar-musica').addEventListener('submit', function(event) 
+    {
+        event.preventDefault();
+
+        const artist = event.target.artist.value.trim();
+        const song = event.target.song.value.trim();
+        const loader = document.querySelector('.loader');
+        loader.style.display = 'block';
+
+        const error = document.querySelector('.error');
+        error.textContent = '';
+
+        const artistInfo = document.querySelector('.artist');
+        artistInfo.textContent = '';
+        
+        const songInfo = document.querySelector('.song');
+        songInfo.textContent = '';
+
+
+        const url = `https://api.lyrics.ovh/v1/${artist}/${song}`;
+        console.log(url);
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                loader.style.display = 'none';
+                if (data.error) 
+                    {
+                    error.textContent = data.error;
+                } else 
+                {
+                    artistInfo.innerHTML = `Artista: <strong>${artist}</strong>`;
+                    songInfo.innerHTML = `Canción: <strong>${song}</strong><br>Letra: <pre>${data.lyrics}</pre>`;
+                    songInfo.style.display = 'block';
+                    //info de la cancion
+                }
+            })
+            .catch(err => 
+                {
+                    loader.style.display = 'none';
+                    error.textContent = 'Error al buscar la canción.';
+                });
+    });
