@@ -970,6 +970,18 @@ h1 ,h2{
     height: 100%;
 }
 
+.loader {
+    display: none;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .contact-image {
     width: 50%;
 }
@@ -1644,4 +1656,24 @@ hr{
     border-radius: 5px;
     max-height: 300px;
     overflow-y: auto; 
+}
+
+.lyrics-container {
+    background-color: #333; /* Fondo gris oscuro */
+    color: white; /* Letras blancas */
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    white-space: pre-wrap; /* Mantiene el formato de los saltos de línea en las letras */
+    font-family: 'Courier New', Courier, monospace; /* Tipo de letra para mejorar la legibilidad */
+}
+
+
+.contact-info input, .contact-info textarea, .contact-info select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }

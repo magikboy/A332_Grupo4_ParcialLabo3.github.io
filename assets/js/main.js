@@ -173,46 +173,50 @@ $(document).ready(function() {
         
     });
 
-    document.getElementById('buscar-musica').addEventListener('submit', function(event) 
-    {
+    document.getElementById('use-predefined').addEventListener('click', function() {
+        var selection = document.getElementById('predefined-searches').value;
+        if (selection) {
+            var parts = selection.split(',');
+            document.querySelector('[name="artist"]').value = parts[0];
+            document.querySelector('[name="song"]').value = parts[1];
+        }
+    });
+    
+    document.getElementById('buscar-musica-form').addEventListener('submit', function(event) {
         event.preventDefault();
-
-        const artist = event.target.artist.value.trim();
-        const song = event.target.song.value.trim();
+        const artist = this.artist.value.trim();
+        const song = this.song.value.trim();
+        buscarLetras(artist, song);
+    });
+    
+    function buscarLetras(artist, song) {
         const loader = document.querySelector('.loader');
         loader.style.display = 'block';
-
         const error = document.querySelector('.error');
-        error.textContent = '';
-
         const artistInfo = document.querySelector('.artist');
-        artistInfo.textContent = '';
-        
         const songInfo = document.querySelector('.song');
+    
+        error.textContent = '';
+        artistInfo.textContent = '';
         songInfo.textContent = '';
-
-
+    
         const url = `https://api.lyrics.ovh/v1/${artist}/${song}`;
-        console.log(url);
-
         fetch(url)
             .then(response => response.json())
             .then(data => {
                 loader.style.display = 'none';
-                if (data.error) 
-                    {
+                if (data.error) {
                     error.textContent = data.error;
-                } else 
-                {
+                } else {
                     artistInfo.innerHTML = `Artista: <strong>${artist}</strong>`;
                     songInfo.innerHTML = `Canción: <strong>${song}</strong><br>Letra: <pre>${data.lyrics}</pre>`;
                     songInfo.style.display = 'block';
-                    //info de la cancion
                 }
             })
-            .catch(err => 
-                {
-                    loader.style.display = 'none';
-                    error.textContent = 'Error al buscar la canción.';
-                });
-    });
+            .catch(err => {
+                loader.style.display = 'none';
+                error.textContent = 'Error al buscar la canción.';
+            });
+    }
+    
+    

@@ -4,7 +4,7 @@
 <head>
     <!-- Titulos de la pagina -->
     <title>Vinyl Vault</title>
-    
+
     <!-- Eetiquetas Tag -->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -40,6 +40,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.all.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
 
     <script type="text/javascript">
         emailjs.init('HHHl2uFe0R_jKPp9-')
@@ -73,6 +74,7 @@
                     <li><a href="#merch-section">Merch</a></li>
                     <li><a href="#cd">Cd's</a></li>
                     <li><a href="register.html">Registrarse</a></li>
+                    <li><a href="#buscar-musica">Letras</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </div>
                 <div class="user-icon">
@@ -81,10 +83,10 @@
             </div>
         </div>
     </nav>
-    
-    
-    
-    
+
+
+
+
     <header class="header">
         <div id="headerCarousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -110,7 +112,7 @@
                 <a href="#nosotros" class="btn animate__animated animate__fadeInUp animate__slow">
                     Conócenos
                     <img src="assets/cursor/2.png" alt="Icono" class="btn-icon">
-                </a>                
+                </a>
             </div>
             <a class="carousel-control-prev" href="#headerCarousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -487,6 +489,62 @@
             </div>
         </section>
 
+        <section class="contact" id="buscar-musica">
+            <div class="contact-container">
+                <div class="contact-container d-block d-lg-flex">
+                    <div class="contact-info col-12">
+                        <h2>Buscador Letras de Canciones</h2>
+                        <p>Introduce el nombre del intérprete y la canción que deseas buscar, o selecciona una predefinida:</p>
+                        <select id="predefined-searches">
+                            <option value="">Seleccione una búsqueda predefinida...</option>
+                            <option value="Queen,We Will Rock You">Queen - We Will Rock You</option>
+                            <option value="The Beatles,Let It Be">The Beatles - Let It Be</option>
+                            <option value="Michael Jackson,Billie Jean">Michael Jackson - Billie Jean</option>
+                            <option value="Whitney Houston,I Will Always Love You">Whitney Houston - I Will Always Love You</option>
+                            <option value="Nirvana,Smells Like Teen Spirit">Nirvana - Smells Like Teen Spirit</option>
+                            <option value="Adele,Hello">Adele - Hello</option>
+                            <option value="Led Zeppelin,Stairway To Heaven">Led Zeppelin - Stairway To Heaven</option>
+                            <option value="Prince,Purple Rain">Prince - Purple Rain</option>
+                            <option value="Bob Dylan,Like a Rolling Stone">Bob Dylan - Like a Rolling Stone</option>
+                            <option value="Madonna,Like a Prayer">Madonna - Like a Prayer</option>
+                            <option value="The Rolling Stones,Paint It Black">The Rolling Stones - Paint It Black</option>
+                            <option value="Beyoncé,Halo">Beyoncé - Halo</option>
+                            <option value="Radiohead,Creep">Radiohead - Creep</option>
+                            <option value="Elvis Presley,Can't Help Falling in Love">Elvis Presley - Can't Help Falling in Love</option>
+                            <option value="Taylor Swift,Shake It Off">Taylor Swift - Shake It Off</option>
+                            <option value="The Eagles,Hotel California">The Eagles - Hotel California</option>
+                            <option value="Linkin Park,In the End">Linkin Park - In the End</option>
+                            <option value="Johnny Cash,Ring of Fire">Johnny Cash - Ring of Fire</option>
+                            <option value="Metallica,Enter Sandman">Metallica - Enter Sandman</option>
+                            <option value="David Bowie,Space Oddity">David Bowie - Space Oddity</option>
+                            <option value="Aerosmith,Dream On">Aerosmith - Dream On</option>
+                            <option value="Frank Sinatra,Fly Me to the Moon">Frank Sinatra - Fly Me to the Moon</option>
+                            <option value="Drake,God's Plan">Drake - God's Plan</option>
+                        </select>
+                        
+                        <button id="use-predefined">Usar Predefinida</button>
+                        <form id="buscar-musica-form">
+                            <div class="field">
+                                <input type="text" name="artist" placeholder="Nombre del Intérprete" required>
+                            </div>
+                            <div class="field">
+                                <input type="text" name="song" placeholder="Nombre de la Canción" required>
+                            </div>
+                            <div class="button-group">
+                                <button class="contact-info" type="submit">Buscar</button>
+                            </div>
+                        </form>
+                        <img class="loader" src="/assets/img/cargando.png" alt="Cargando..." style="display: none;">
+                        <aside class="error"></aside>
+                        <article class="artist"></article>
+                        <article class="song lyrics-container"></article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+
 
         <section id="newCarouselSection">
             <div id="newImageCarousel" class="carousel slide" data-ride="carousel">
@@ -519,6 +577,8 @@
                     <span class="sr-only">Siguiente</span>
                 </a>
             </div>
+
+
 
         </section>
         <section class="contact" id="contacto">
@@ -554,31 +614,7 @@
             </div>
         </section>
 
-        <section class="contact" id="contacto">
-            <div class="contact-container">
-                <div class="contact-container d-block d-lg-flex">
-                    <div class="contact-info col-12">
-                        <h2>Buscador Letras de Canciones</h2>
-                        <p>Introduce el nombre del intérprete y la canción que deseas buscar:</p>
-                        <form id="buscar-musica">
-                            <div class="field">
-                                <input type="text" name="artist" placeholder="Nombre del Intérprete" required>
-                            </div>
-                            <div class="field">
-                                <input type="text" name="song" placeholder="Nombre de la Canción" required>
-                            </div>
-                            <div class="button-group">
-                                <button class="contact-info" type="submit">Buscar</button>
-                            </div>
-                        </form>
-                        <img class="loader" src="https://www.example.com/loader.svg" alt="Cargando...">
-                        <aside class="error"></aside>
-                        <article class="artist"></article>
-                        <article class="song"></article>
-                    </div>
-                </div>
-            </div>
-        </section>
+
         <footer>
             <div class="footer-container d-block d-md-flex ">
                 <div class="footer-section logo-section">
@@ -592,6 +628,7 @@
                         <li><a href="#merch-section">MERCH</a></li>
                         <li><a href="#cd">CD'S</a></li>
                         <li><a href="register.html">REGISTRARSE</a></li>
+                        <li><a href="#buscar-musica">LETRAS</a></li>
                         <li><a href="#contacto">CONTACTO</a></li>
                     </ul>
                 </div>
