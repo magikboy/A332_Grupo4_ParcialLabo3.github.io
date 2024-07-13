@@ -467,9 +467,6 @@ h1 ,h2{
     .nosotros-container {
         flex-direction: column;
     }
-    .nosotros-image, .nosotros-info {
-        width: 100%;
-    }
     .nosotros-info h2 {
         font-size: 32px;
     }
@@ -491,9 +488,6 @@ h1 ,h2{
     .nosotros-container {
         flex-direction: column;
     }
-    .nosotros-image, .nosotros-info {
-        width: 100%;
-    }
     .nosotros-info h2 {
         font-size: 1.8rem;
     }
@@ -509,9 +503,6 @@ h1 ,h2{
     }
     .nosotros-container {
         flex-direction: column;
-    }
-    .nosotros-image, .nosotros-info {
-        width: 100%;
     }
     .nosotros-info h2 {
         font-size: 2rem;
@@ -529,8 +520,11 @@ h1 ,h2{
     .nosotros-container {
         flex-direction: column;
     }
-    .nosotros-image, .nosotros-info {
-        width: 100%;
+    .nosotros-info {
+        width: 100% !important;
+    }
+    .nosotros-image img {
+        display: none;
     }
     .nosotros-info h2 {
         font-size: 2.2rem;
@@ -1063,10 +1057,10 @@ h1 ,h2{
 }
 
 .contact-info button {
-    display: block; /* Asegura que el botón sea un elemento de bloque */
-    width: 15%; /* Ocupa todo el ancho del contenedor */
-    font-size: 16px; /* Ajusta el tamaño de la fuente */
-    padding: 10px 20px; /* Ajusta el relleno para hacer el botón más pequeño */
+    display: block;
+    width: 15%;
+    font-size: 16px;
+    padding: 10px 20px;
     color: #000000;
     background-color: #ffffff;
     border: none;
@@ -1074,7 +1068,28 @@ h1 ,h2{
     transition: background-color 0.3s ease;
 }
 
+
 .contact-info button:hover {
+    background-color: #ffffff;
+    transform: scale(1.01);
+}
+
+#use-predefined {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#use-predefined:hover {
     background-color: #ffffff;
     transform: scale(1.01);
 }
